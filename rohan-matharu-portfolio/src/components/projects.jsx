@@ -7,7 +7,7 @@ const projects = [
 		description:
 			"A comprehensive web application for concrete pumping companies to manage daily operations, scheduling, and reporting. Features include job management, real-time scheduling, customer tracking, and detailed reporting systems.",
 		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS"],
-		github: "https://github.com/DMIT-2590/2024-Fall-PlanetCom",
+		github: "https://github.com/crazyturtles/2024-Fall-PlanetCom-Sept-Dec-2024",
 		manualUrl: "/manuals/PumpMasterManual",
 		manualText: "PumpMaster Manual",
 		image: "/api/placeholder/600/400",

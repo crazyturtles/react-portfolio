@@ -6,12 +6,12 @@ const ReportingComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Report Controls</h3>
 			<img
-				src="/src/public/manual-images/report-header.png"
+				src="/manual-images/report-header.png"
 				alt="Report Header"
 				className="rounded-lg shadow-md mb-4"
 			/>
-			<div className="grid gap-4 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-4">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Basic Controls</h4>
 					<ul className="list-disc list-inside">
 						<li>Print functionality</li>
@@ -20,10 +20,10 @@ const ReportingComplete = () => (
 						<li>Zoom controls</li>
 					</ul>
 				</div>
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Page Setup</h4>
 					<img
-						src="/src/public/manual-images/page-layout-settings.png"
+						src="/manual-images/page-layout-settings.png"
 						alt="Page Layout"
 						className="rounded-lg shadow-md mb-2"
 					/>
@@ -40,7 +40,7 @@ const ReportingComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Customer Job History</h3>
 			<img
-				src="/src/public/manual-images/customer-history.png"
+				src="/manual-images/customer-history.png"
 				alt="Customer History"
 				className="rounded-lg shadow-md mb-4"
 			/>
@@ -58,11 +58,11 @@ const ReportingComplete = () => (
 		{/* Amount Pumped Reports */}
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Amount Pumped Reports</h3>
-			<div className="grid gap-6">
+			<div className="flex flex-col gap-6">
 				<div>
 					<h4 className="font-medium mb-2">By Job Type</h4>
 					<img
-						src="/src/public/manual-images/pumped-amount-report.png"
+						src="/manual-images/pumped-amount-report.png"
 						alt="Pumped Amount Report"
 						className="rounded-lg shadow-md mb-2"
 					/>
@@ -77,7 +77,7 @@ const ReportingComplete = () => (
 				<div>
 					<h4 className="font-medium mb-2">By Unit</h4>
 					<img
-						src="/src/public/manual-images/unit-pumped-amounts.png"
+						src="/manual-images/unit-pumped-amounts.png"
 						alt="Unit Pumped Amounts"
 						className="rounded-lg shadow-md mb-2"
 					/>
@@ -93,11 +93,11 @@ const ReportingComplete = () => (
 		{/* Pipe Change and Job Count */}
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Additional Reports</h3>
-			<div className="grid gap-6 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-6">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Pipe Change Tracking</h4>
 					<img
-						src="/src/public/manual-images/pipe-change-report.png"
+						src="/manual-images/pipe-change-report.png"
 						alt="Pipe Change Report"
 						className="rounded-lg shadow-md mb-2"
 					/>
@@ -108,10 +108,10 @@ const ReportingComplete = () => (
 					</ul>
 				</div>
 
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Job Count Details</h4>
 					<img
-						src="/src/public/manual-images/job-count-summary.png"
+						src="/manual-images/job-count-summary.png"
 						alt="Job Count Summary"
 						className="rounded-lg shadow-md mb-2"
 					/>

@@ -6,12 +6,12 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Technician Management</h3>
 			<img
-				src="/src/public/manual-images/technician-management-page.png"
+				src="/manual-images/technician-management-page.png"
 				alt="Technician Management"
 				className="rounded-lg shadow-md mb-4"
 			/>
-			<div className="grid gap-4 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-4">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Filtering Options</h4>
 					<ul className="list-disc list-inside">
 						<li>All technicians view</li>
@@ -20,7 +20,7 @@ const DataManagementComplete = () => (
 						<li>Search functionality</li>
 					</ul>
 				</div>
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Management Features</h4>
 					<ul className="list-disc list-inside">
 						<li>Load and edit existing data</li>
@@ -36,12 +36,12 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Supplier Management</h3>
 			<img
-				src="/src/public/manual-images/supplier-management-page.png"
+				src="/manual-images/supplier-management-page.png"
 				alt="Supplier Management"
 				className="rounded-lg shadow-md mb-4"
 			/>
-			<div className="grid gap-4 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-4">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Key Features</h4>
 					<ul className="list-disc list-inside">
 						<li>Active/Inactive status filtering</li>
@@ -50,7 +50,7 @@ const DataManagementComplete = () => (
 						<li>Add new suppliers</li>
 					</ul>
 				</div>
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Data Management</h4>
 					<ul className="list-disc list-inside">
 						<li>Required field validation</li>
@@ -66,7 +66,7 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Job Types</h3>
 			<img
-				src="/src/public/manual-images/job-types-management.png"
+				src="/manual-images/job-types-management.png"
 				alt="Job Types Management"
 				className="rounded-lg shadow-md mb-4"
 			/>
@@ -82,7 +82,7 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Pour Types</h3>
 			<img
-				src="/src/public/manual-images/pour-types-management.png"
+				src="/manual-images/pour-types-management.png"
 				alt="Pour Types Management"
 				className="rounded-lg shadow-md mb-4"
 			/>
@@ -98,12 +98,12 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Units</h3>
 			<img
-				src="/src/public/manual-images/units-management-page.png"
+				src="/manual-images/units-management-page.png"
 				alt="Units Management"
 				className="rounded-lg shadow-md mb-4"
 			/>
-			<div className="grid gap-4 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-4">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Management Options</h4>
 					<ul className="list-disc list-inside">
 						<li>Status filtering (Active/Inactive)</li>
@@ -112,7 +112,7 @@ const DataManagementComplete = () => (
 						<li>New unit creation</li>
 					</ul>
 				</div>
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Unit Details</h4>
 					<ul className="list-disc list-inside">
 						<li>Unit selection dropdown</li>
@@ -128,12 +128,12 @@ const DataManagementComplete = () => (
 		<div className="bg-gray-50 p-6 rounded-lg">
 			<h3 className="font-semibold mb-4">Company Information</h3>
 			<img
-				src="/src/public/manual-images/company-information-page.png"
+				src="/manual-images/company-information-page.png"
 				alt="Company Information"
 				className="rounded-lg shadow-md mb-4"
 			/>
-			<div className="grid gap-4 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-4">
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">General Settings</h4>
 					<ul className="list-disc list-inside">
 						<li>Company details update</li>
@@ -142,7 +142,7 @@ const DataManagementComplete = () => (
 						<li>Email test functionality</li>
 					</ul>
 				</div>
-				<div>
+				<div className="flex-1">
 					<h4 className="font-medium mb-2">Actions</h4>
 					<ul className="list-disc list-inside">
 						<li>Save all changes</li>

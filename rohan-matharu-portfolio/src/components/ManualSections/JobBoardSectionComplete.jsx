@@ -4,13 +4,13 @@ const JobBoardSectionComplete = () => (
 
 		<div className="space-y-6">
 			<img
-				src="/src/public/manual-images/job-board-main-view.png"
+				src="/manual-images/job-board-main-view.png"
 				alt="Job Board Main View"
 				className="rounded-lg shadow-md w-full"
 			/>
 
-			<div className="grid gap-6 md:grid-cols-2">
-				<div>
+			<div className="flex flex-col md:flex-row gap-6">
+				<div className="flex-1">
 					<h3 className="font-semibold mb-4">Navigation Controls</h3>
 					<ul className="list-disc list-inside space-y-2">
 						<li>Previous day button</li>
@@ -20,10 +20,10 @@ const JobBoardSectionComplete = () => (
 					</ul>
 				</div>
 
-				<div>
+				<div className="flex-1">
 					<h3 className="font-semibold mb-4">Time Display</h3>
 					<img
-						src="/src/public/manual-images/time-display.png"
+						src="/manual-images/job-board-time-display.png"
 						alt="Time Display"
 						className="rounded-lg shadow-md mb-2"
 					/>
@@ -33,11 +33,11 @@ const JobBoardSectionComplete = () => (
 
 			<div className="bg-gray-50 p-6 rounded-lg">
 				<h3 className="font-semibold mb-4">Search and Job Status</h3>
-				<div className="grid gap-6 md:grid-cols-2">
-					<div>
+				<div className="flex flex-col md:flex-row gap-6">
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Job Status View</h4>
 						<img
-							src="/src/public/manual-images/job-status.png"
+							src="/manual-images/job-status-view.png"
 							alt="Job Status View"
 							className="rounded-lg shadow-md mb-2"
 						/>
@@ -47,10 +47,10 @@ const JobBoardSectionComplete = () => (
 						</ul>
 					</div>
 
-					<div>
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Search Functionality</h4>
 						<img
-							src="/src/public/manual-images/search-by-ticket.png"
+							src="/manual-images/search-by-ticket.png"
 							alt="Search By Ticket"
 							className="rounded-lg shadow-md mb-2"
 						/>
@@ -65,12 +65,12 @@ const JobBoardSectionComplete = () => (
 			<div className="bg-gray-50 p-6 rounded-lg">
 				<h3 className="font-semibold mb-4">Right-Click Menu Options</h3>
 				<img
-					src="/src/public/manual-images/right-click-menu.png"
+					src="/manual-images/job-board-right-click-menu.png"
 					alt="Right Click Menu"
 					className="rounded-lg shadow-md mb-4"
 				/>
-				<div className="grid gap-6 md:grid-cols-3">
-					<div>
+				<div className="flex flex-col md:flex-row gap-6">
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Job Management</h4>
 						<ul className="list-disc list-inside space-y-1">
 							<li>New Job creation</li>
@@ -81,7 +81,7 @@ const JobBoardSectionComplete = () => (
 						</ul>
 					</div>
 
-					<div>
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Unit & Operator</h4>
 						<ul className="list-disc list-inside space-y-1">
 							<li>Assign job to unit</li>
@@ -91,7 +91,7 @@ const JobBoardSectionComplete = () => (
 						</ul>
 					</div>
 
-					<div>
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Status & Info</h4>
 						<ul className="list-disc list-inside space-y-1">
 							<li>Confirm details</li>

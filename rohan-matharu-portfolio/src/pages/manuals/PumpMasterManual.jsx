@@ -10,8 +10,12 @@ import ReportingComplete from "../../components/ManualSections/ReportingComplete
 
 const sections = [
 	{ id: "what-is-pumpmaster-v3", title: "What is PumpMaster V3" },
-	{ id: "logging-in", title: "Logging in" },
-	{ id: "job-board", title: "Job Board" },
+	{ id: "logging-in", title: "Logging in the PumpMaster V3" },
+	{ id: "explore-the-job-board", title: "Explore the Job Board" },
+	{
+		id: "right-clicking-listing",
+		title: "Right Clicking a Listing on the Job Board",
+	},
 	{ id: "job-creation", title: "Job Creation" },
 	{ id: "modify-a-job", title: "Modify a Job" },
 	{ id: "manage-data", title: "Manage Data" },
@@ -20,7 +24,7 @@ const sections = [
 
 const PumpMasterManual = () => {
 	return (
-		<ManualContainer title="PumpMaster V3 Documentation">
+		<ManualContainer title="PumpMaster Version 3.0">
 			<div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 				<aside className="lg:col-span-1">
 					<ManualNavigation sections={sections} />
@@ -35,26 +39,18 @@ const PumpMasterManual = () => {
 						/>
 					</div>
 
-					<div className="bg-white p-6 rounded-lg shadow-sm mb-8">
-						<div className="flex items-center mb-4">
-							<img
-								src="/github/workflows/jest.yml/badge.svg?branch=sprint-3-testing"
-								alt="Jest Tests"
-								className="mr-2"
-							/>
-						</div>
-						<p className="text-lg">Version 3.0 - User Manual</p>
-					</div>
-
 					<section id="what-is-pumpmaster-v3" className="mb-12">
 						<h2>What is PumpMaster V3</h2>
 						<p>
-							PumpMaster is a web application designed for Concrete Pumping
-							companies to streamline their daily operations. Version 3 builds
-							upon PumpMasterV2's foundation while introducing a more intuitive
-							user interface. The application maintains comprehensive
-							functionality for data management, job scheduling, and assignment
-							processes.
+							PumpMaster is a web application that aims to help a Concrete
+							Pumping company with daily operations. The PumpMaster V3 is an
+							upgrade from the PumpMasterV2; the new application still retains
+							the robust functionality of its predecessor, from maintaining all
+							data essential to the end user's daily operation to creating,
+							scheduling, and assigning a job. With a newer and a more
+							user-friendly user interface, the PumpMasterV3 application aims to
+							make the work of the end user a lot more efficient and that will
+							directly translate to the company's success.
 						</p>
 					</section>
 

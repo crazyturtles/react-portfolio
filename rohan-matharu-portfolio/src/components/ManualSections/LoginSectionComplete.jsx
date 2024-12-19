@@ -4,9 +4,9 @@ const LoginSectionComplete = () => (
 
 		<div className="space-y-4">
 			<img
-				src="/src/public/manual-images/login-screen.png"
+				src="/manual-images/login-screen.png"
 				alt="Login Screen"
-				className="rounded-lg shadow-md w-full"
+				className="rounded-lg shadow-md w-auto"
 			/>
 
 			<div className="bg-gray-50 p-6 rounded-lg">
@@ -38,7 +38,7 @@ const LoginSectionComplete = () => (
 
 			<div className="space-y-4">
 				<img
-					src="/src/public/manual-images/user-profile-menu.png"
+					src="/manual-images/user-profile-submenu.png"
 					alt="User Profile Menu"
 					className="rounded-lg shadow-md"
 				/>
@@ -55,7 +55,7 @@ const LoginSectionComplete = () => (
 			<div className="bg-gray-50 p-6 rounded-lg">
 				<h3 className="font-semibold mb-4">Creating New Users</h3>
 				<img
-					src="/src/public/manual-images/create-user-form.png"
+					src="/manual-images/create-user-form.png"
 					alt="Create User Form"
 					className="rounded-lg shadow-md mb-4"
 				/>

@@ -18,13 +18,13 @@ const JobCreationSection = () => (
 
 		<div className="space-y-4">
 			<img
-				src="/src/public/manual-images/job-creation-form.png"
+				src="/manual-images/job-creation-form.png"
 				alt="Job Creation Form"
 				className="rounded-lg shadow-md w-full"
 			/>
 
-			<div className="grid gap-6 md:grid-cols-2">
-				<div className="space-y-4">
+			<div className="flex flex-col md:flex-row gap-6">
+				<div className="flex-1 space-y-4">
 					<h3 className="font-semibold">Essential Information</h3>
 					<ul className="list-disc list-inside space-y-2">
 						<li>Ticket Number: Auto-generated based on job date</li>
@@ -40,10 +40,10 @@ const JobCreationSection = () => (
 					</ul>
 				</div>
 
-				<div className="space-y-4">
+				<div className="flex-1 space-y-4">
 					<h3 className="font-semibold">Contact Management</h3>
 					<img
-						src="/src/public/manual-images/contact-selection-popup.png"
+						src="/manual-images/contact-selection-popup.png"
 						alt="Contact Selection"
 						className="rounded-lg shadow-md"
 					/>
@@ -58,8 +58,8 @@ const JobCreationSection = () => (
 
 			<div className="bg-gray-50 p-6 rounded-lg space-y-4">
 				<h3 className="font-semibold">Job Details Configuration</h3>
-				<div className="grid gap-6 md:grid-cols-2">
-					<div>
+				<div className="flex flex-col md:flex-row gap-6">
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Pump and Pour Settings</h4>
 						<ul className="list-disc list-inside space-y-2">
 							<li>Select pump type with preset hourly rates</li>
@@ -70,7 +70,7 @@ const JobCreationSection = () => (
 						</ul>
 					</div>
 
-					<div>
+					<div className="flex-1">
 						<h4 className="font-medium mb-2">Additional Features</h4>
 						<ul className="list-disc list-inside space-y-2">
 							<li>Carbon Levy selection (whole number rates)</li>

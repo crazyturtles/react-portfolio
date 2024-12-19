@@ -4,13 +4,13 @@ const JobManagementSection = () => (
 			<h2>Job Creation</h2>
 			<div className="space-y-6">
 				<img
-					src="/src/public/manual-images/job-creation-form.png"
+					src="/manual-images/job-creation-form.png"
 					alt="Job Creation Form"
 					className="rounded-lg shadow-md"
 				/>
 
-				<div className="grid md:grid-cols-2 gap-6">
-					<div className="space-y-4">
+				<div className="flex flex-col md:flex-row gap-6">
+					<div className="flex-1 space-y-4">
 						<h3 className="font-semibold">Basic Information</h3>
 						<ul className="list-disc list-inside space-y-2">
 							<li>Auto-generated ticket numbers</li>
@@ -20,12 +20,12 @@ const JobManagementSection = () => (
 						</ul>
 					</div>
 
-					<div className="space-y-4">
+					<div className="flex-1 space-y-4">
 						<h3 className="font-semibold">Contact Management</h3>
 						<img
-							src="/src/public/manual-images/contact-selection-popup.png"
+							src="/manual-images/contact-selection-popup.png"
 							alt="Contact Selection"
-							className="rounded-lg shadow-md"
+							className="rounded-lg shadow-md w-72"
 						/>
 						<ul className="list-disc list-inside space-y-2">
 							<li>Search existing contacts</li>
@@ -54,7 +54,7 @@ const JobManagementSection = () => (
 			<h2>Modify a Job</h2>
 			<div className="space-y-6">
 				<img
-					src="/src/public/manual-images/job-modification-form.png"
+					src="/manual-images/job-modification-form.png"
 					alt="Job Modification Form"
 					className="rounded-lg shadow-md"
 				/>
