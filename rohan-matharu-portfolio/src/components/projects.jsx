@@ -8,8 +8,7 @@ const projects = [
 			"A comprehensive web application for concrete pumping companies to manage daily operations, scheduling, and reporting. Features include job management, real-time scheduling, customer tracking, and detailed reporting systems.",
 		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS"],
 		github: "https://github.com/crazyturtles/2024-Fall-PlanetCom-Sept-Dec-2024",
-		manualUrl: "/manuals/PumpMasterManual",
-		manualText: "PumpMaster Manual",
+		manualPath: "pumpmaster",
 		image: "/api/placeholder/600/400",
 	},
 	{
@@ -18,8 +17,6 @@ const projects = [
 		tags: ["Next.js", "Tailwind", "Stripe"],
 		github: "https://github.com/yourusername/project-two",
 		live: "https://project-two.com",
-		manualUrl: "/ecommerce-manual",
-		manualText: "E-commerce Manual",
 		image: "/api/placeholder/600/400",
 	},
 ];
@@ -76,12 +73,14 @@ const Projects = () => {
 										<ExternalLink size={20} /> Live Demo
 									</a>
 								)}
-								<Link
-									to={project.manualUrl}
-									className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
-								>
-									<BookOpen size={20} /> {project.manualText}
-								</Link>
+								{project.manualPath && (
+									<Link
+										to={`/manuals/${project.manualPath}`}
+										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+									>
+										<BookOpen size={20} /> View Manual
+									</Link>
+								)}
 							</div>
 						</div>
 					))}

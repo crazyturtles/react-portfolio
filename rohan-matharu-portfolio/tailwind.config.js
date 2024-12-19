@@ -30,7 +30,32 @@ export default {
 					"100%": { transform: "translateY(0)", opacity: "1" },
 				},
 			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: "none",
+						h1: {
+							fontFamily: "Poppins, sans-serif",
+							fontWeight: "700",
+						},
+						h2: {
+							fontFamily: "Poppins, sans-serif",
+							fontWeight: "700",
+						},
+						h3: {
+							fontFamily: "Poppins, sans-serif",
+							fontWeight: "600",
+						},
+						a: {
+							color: "#2563eb",
+							"&:hover": {
+								color: "#1d4ed8",
+							},
+						},
+					},
+				},
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 };

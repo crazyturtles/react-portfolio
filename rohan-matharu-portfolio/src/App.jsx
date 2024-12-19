@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-import PumpMasterManual from "./pages/manuals/PumpMasterManual";
+import Manual from "./components/Manual";
 
 const MainLayout = () => (
 	<main className="min-h-screen bg-white">
@@ -40,10 +40,7 @@ const App = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={<MainLayout />} />
-				<Route
-					path="/manuals/PumpMasterManual"
-					element={<PumpMasterManual />}
-				/>
+				<Route path="/manuals/:projectId" element={<Manual />} />
 			</Routes>
 		</Router>
 	);
