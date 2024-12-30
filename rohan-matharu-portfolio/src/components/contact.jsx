@@ -61,7 +61,7 @@ const Contact = () => {
 	return (
 		<section id="contact" className="py-section">
 			<div className="container mx-auto px-4">
-				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary">
+				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
 					Get In Touch
 				</h2>
 				<div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -80,7 +80,10 @@ const Contact = () => {
 							</div>
 						)}
 						<div>
-							<label htmlFor="name" className="mb-1 block text-secondary">
+							<label
+								htmlFor="name"
+								className="mb-1 block text-secondary select-none"
+							>
 								Name
 							</label>
 							<input
@@ -95,7 +98,10 @@ const Contact = () => {
 							/>
 						</div>
 						<div>
-							<label htmlFor="email" className="mb-1 block text-secondary">
+							<label
+								htmlFor="email"
+								className="mb-1 block text-secondary select-none"
+							>
 								Email
 							</label>
 							<input
@@ -110,7 +116,10 @@ const Contact = () => {
 							/>
 						</div>
 						<div>
-							<label htmlFor="message" className="mb-1 block text-secondary">
+							<label
+								htmlFor="message"
+								className="mb-1 block text-secondary select-none"
+							>
 								Message
 							</label>
 							<textarea
@@ -127,7 +136,7 @@ const Contact = () => {
 						<button
 							type="submit"
 							disabled={loading}
-							className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90 disabled:bg-primary/50"
+							className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90 disabled:bg-primary/50 select-none"
 						>
 							{loading ? "Sending..." : "Send Message"}
 							<Send size={16} />
@@ -136,20 +145,20 @@ const Contact = () => {
 
 					<div className="space-y-6">
 						<div className="rounded-lg bg-gray-50 p-6">
-							<h3 className="mb-4 font-heading text-xl font-bold">
+							<h3 className="mb-4 font-heading text-xl font-bold select-none">
 								Connect With Me
 							</h3>
 							<div className="space-y-4">
 								<a
 									href="mailto:rohanmatharu@live.ca"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
+									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
 								>
 									<Mail /> rohanmatharu@live.ca
 								</a>
 								<a
 									href="https://github.com/crazyturtles"
 									target="_blank"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
+									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
 									rel="noreferrer"
 								>
 									<Github /> GitHub
@@ -157,7 +166,7 @@ const Contact = () => {
 								<a
 									href="https://linkedin.com/in/rohanmatharu"
 									target="_blank"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
+									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
 									rel="noreferrer"
 								>
 									<Linkedin /> LinkedIn

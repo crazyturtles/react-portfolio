@@ -9,7 +9,6 @@ const projects = [
 		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS"],
 		github: "https://github.com/crazyturtles/2024-Fall-PlanetCom-Sept-Dec-2024",
 		manualPath: "pumpmaster",
-		image: "/api/placeholder/600/400",
 	},
 	{
 		title: "Project Two",
@@ -17,7 +16,6 @@ const projects = [
 		tags: ["Next.js", "Tailwind", "Stripe"],
 		github: "https://github.com/yourusername/project-two",
 		live: "https://project-two.com",
-		image: "/api/placeholder/600/400",
 	},
 ];
 
@@ -35,20 +33,17 @@ const Projects = () => {
 							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
-							<img
-								src={project.image}
-								alt={project.title}
-								className="mb-4 rounded-lg transition-transform group-hover:scale-[1.02]"
-							/>
-							<h3 className="mb-2 font-heading text-2xl font-bold">
+							<h3 className="mb-2 font-heading text-2xl font-bold select-none">
 								{project.title}
 							</h3>
-							<p className="mb-4 text-secondary">{project.description}</p>
+							<p className="mb-4 text-secondary select-none">
+								{project.description}
+							</p>
 							<div className="mb-4 flex flex-wrap gap-2">
 								{project.tags.map((tag) => (
 									<span
 										key={tag}
-										className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent"
+										className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent select-none"
 									>
 										{tag}
 									</span>
@@ -58,7 +53,7 @@ const Projects = () => {
 								<a
 									href={project.github}
 									target="_blank"
-									className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+									className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
 									rel="noreferrer"
 								>
 									<Github size={20} /> Code
@@ -67,7 +62,7 @@ const Projects = () => {
 									<a
 										href={project.live}
 										target="_blank"
-										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
 										rel="noreferrer"
 									>
 										<ExternalLink size={20} /> Live Demo
@@ -76,7 +71,7 @@ const Projects = () => {
 								{project.manualPath && (
 									<Link
 										to={`/manuals/${project.manualPath}`}
-										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
 									>
 										<BookOpen size={20} /> View Manual
 									</Link>
