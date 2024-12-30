@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
@@ -7,11 +8,54 @@ const Contact = () => {
 		email: "",
 		message: "",
 	});
+	const [status, setStatus] = useState({ type: "", message: "", show: false });
+	const [loading, setLoading] = useState(false);
 
-	const handleSubmit = (e) => {
+	useEffect(() => {
+		let timeoutId;
+		if (status.message) {
+			setStatus((prev) => ({ ...prev, show: true }));
+			timeoutId = setTimeout(() => {
+				setStatus((prev) => ({ ...prev, show: false }));
+				setTimeout(() => {
+					setStatus({ type: "", message: "", show: false });
+				}, 300);
+			}, 10000);
+		}
+		return () => clearTimeout(timeoutId);
+	}, [status.message]);
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Add form submission logic here
-		console.log(formData);
+		setLoading(true);
+		setStatus({ type: "", message: "", show: false });
+
+		try {
+			await emailjs.send(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				{
+					from_name: formData.name,
+					reply_to: formData.email,
+					message: formData.message,
+				},
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+			);
+
+			setStatus({
+				type: "success",
+				message: "Message sent successfully! I will get back to you soon.",
+				show: true,
+			});
+			setFormData({ name: "", email: "", message: "" });
+		} catch (error) {
+			setStatus({
+				type: "error",
+				message: "Failed to send message. Please try again.",
+				show: true,
+			});
+		}
+		setLoading(false);
 	};
 
 	return (
@@ -22,6 +66,19 @@ const Contact = () => {
 				</h2>
 				<div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
 					<form onSubmit={handleSubmit} className="space-y-4">
+						{status.message && (
+							<div
+								className={`p-4 rounded-lg mb-4 transition-opacity duration-300 ${
+									status.show ? "opacity-100" : "opacity-0"
+								} ${
+									status.type === "error"
+										? "bg-red-100 text-red-800"
+										: "bg-green-100 text-green-800"
+								}`}
+							>
+								{status.message}
+							</div>
+						)}
 						<div>
 							<label htmlFor="name" className="mb-1 block text-secondary">
 								Name
@@ -29,6 +86,7 @@ const Contact = () => {
 							<input
 								type="text"
 								id="name"
+								required
 								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
 								value={formData.name}
 								onChange={(e) =>
@@ -43,6 +101,7 @@ const Contact = () => {
 							<input
 								type="email"
 								id="email"
+								required
 								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
 								value={formData.email}
 								onChange={(e) =>
@@ -57,6 +116,7 @@ const Contact = () => {
 							<textarea
 								id="message"
 								rows={4}
+								required
 								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
 								value={formData.message}
 								onChange={(e) =>
@@ -66,9 +126,10 @@ const Contact = () => {
 						</div>
 						<button
 							type="submit"
-							className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90"
+							disabled={loading}
+							className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90 disabled:bg-primary/50"
 						>
-							Send Message
+							{loading ? "Sending..." : "Send Message"}
 							<Send size={16} />
 						</button>
 					</form>
@@ -80,13 +141,13 @@ const Contact = () => {
 							</h3>
 							<div className="space-y-4">
 								<a
-									href="mailto:your.email@example.com"
+									href="mailto:rohanmatharu@live.ca"
 									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
 								>
-									<Mail /> your.email@example.com
+									<Mail /> rohanmatharu@live.ca
 								</a>
 								<a
-									href="https://github.com/yourusername"
+									href="https://github.com/crazyturtles"
 									target="_blank"
 									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
 									rel="noreferrer"
@@ -94,7 +155,7 @@ const Contact = () => {
 									<Github /> GitHub
 								</a>
 								<a
-									href="https://linkedin.com/in/yourusername"
+									href="https://linkedin.com/in/rohanmatharu"
 									target="_blank"
 									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary"
 									rel="noreferrer"

@@ -2,35 +2,11 @@
 
 ![Pumpmaster Logo](/img/pumpmaster-logo-2.1-transparent.png)
 
-## Table of Contents
-- [What is PumpMaster V3](#what-is-pumpmaster-v3-)
-- [Logging in the PumpMaster V3](#logging-in-the-pumpmaster-v3-)
-- [Explore the Job Board](#explore-the-job-board-)
-- [Right Clicking a Listing on the Job Board](#right-clicking-a-listing-on-the-job-board-)
-- [Job Creation](#job-creation-)
-- [Modify a Job](#modify-a-job-)
-- [Manage Data](#manage-data-)
-  - [Technician](#technician-)
-  - [Supplier](#supplier-)
-  - [Job Types](#job-types-)
-  - [Pour Types](#pour-types-)
-  - [Units](#units-)
-  - [Customer](#customer-)
-  - [Operator](#operator)
-  - [Company Information](#company-information-)
-- [Reporting](#reporting-)
-  - [Customer Job History](#customer-job-history-)
-  - [Amount Pumped by Job Type](#amount-pumped-by-job-type-)
-  - [Amount Pumped by Pump and Date](#amount-pumped-by-pump-and-date-)
-  - [Amount Poured by Unit Since Pipe Change](#amount-poured-by-unit-since-pipe-change-)
-  - [Job Count Details](#job-count-details-)
-  - [Customer History](#customer-history-)
-
-## What is PumpMaster V3 [↑](#table-of-contents)
+## What is PumpMaster V3
 
 PumpMaster is a web application that aims to help a Concrete Pumping company with daily operations. The PumpMaster V3 is an upgrade from the PumpMasterV2; the new application still retains the robust functionality of its predecessor, from maintaining all data essential to the end user's daily operation to creating, scheduling, and assigning a job. With a newer and a more user-friendly user interface, the PumpMasterV3 application aims to make the work of the end user a lot more efficient and that will directly translate to the company's success.
 
-## Logging in the PumpMaster V3 [↑](#table-of-contents)
+## Logging in the PumpMaster V3
 
 Every time a user needs to access PumpMaster V3, they are required to log in using their credentials. Each user has their user access roles.
 
@@ -55,7 +31,7 @@ Once logged in the user will have access to a submenu in the top right of the sc
 
 (Note: a user will be automatically signed out after 12 hours).
 
-## Explore the Job Board [↑](#table-of-contents)
+## Explore the Job Board
 
 The job board (on today's date) is where the user is taken by default after logging in. It shows the various jobs for each day and can access jobs from the past to future jobs. Jobs can be double clicked to bring up an edit screen for that listing. If the user right clicks on a job they will have many options to modify that job listing.
 
@@ -80,7 +56,7 @@ The button in the upper middle of the job board can be clicked to display the cu
 
 ![Search By Ticket][search-by-ticket]
 
-### Right Clicking a Listing on the Job Board [↑](#table-of-contents)
+### Right Clicking a Listing on the Job Board
 
 ![Right Click Menu][right-click-menu]
 
@@ -100,7 +76,7 @@ The button in the upper middle of the job board can be clicked to display the cu
 14. Clicking Customer History will list all the jobs for that customer.
 15. Clicking Cancel will close the menu.
 
-## Job Creation [↑](#table-of-contents)
+## Job Creation
 
 When a new job comes in the user will have to create a job. The user can access the job creation pop-up by either clicking on "Job Creator" in the navigation or by right clicking on a pre-existing job and selecting "New Job". If the user wants to copy the items from one job and use those to create a new job, they can select the "New Job from Template" option in the right click menu.
 
@@ -130,7 +106,7 @@ When a new job comes in the user will have to create a job. The user can access 
 14.	This allows the user to delete a job once it has been created. The user will get two confirmation boxes, one where the user has to select a checkbox and the other being a random 4-digit code that the user has to enter. 
 15.	The user can click on either the “X” to close the form or click to the outside of the form. 
 
-## Modify a Job [↑](#table-of-contents)
+## Modify a Job
 
 For the user to edit a job they would need to select the job they want to edit, right click it, and select "Edit Job".
 
@@ -143,11 +119,11 @@ For the user to edit a job they would need to select the job they want to edit, 
 5. The selected pour types are displayed below selected pour types for convince when editing pour types.
 6. There is a live total update which will automatically get updated when any of the values on the right get altered.
 
-## Manage Data [↑](#table-of-contents)
+## Manage Data
 
 The manage data section of PumpMaster V3 will handle all the essential data that the End User needs for their daily operation.
 
-### Technician [↑](#table-of-contents)
+### Technician
 
 The Technician page allows the user to Add, Edit or Inactivate a technician. The list of units is sorted by their status of Active, Inactive and All.
 
@@ -168,7 +144,7 @@ The Technician page allows the user to Add, Edit or Inactivate a technician. The
 6. To save any changes made to a new or existing technician, the user must click the Add/Save button.
 7. Cancel any changes that have not been saved and return to the last page visited.
 
-### Supplier [↑](#table-of-contents)
+### Supplier
 
 The Supplier page allows the user to Add, Edit or Inactivate a supplier. The list of units is sorted by their status of Active, Inactive and All.
 
@@ -189,7 +165,7 @@ The Supplier page allows the user to Add, Edit or Inactivate a supplier. The lis
 6. To save any changes made to a new or existing supplier, the user must click the Add/Save button.
 7. Cancel any changes that have not been saved and return to the last page visited.
 
-### Job Types [↑](#table-of-contents)
+### Job Types
 
 The Job Type page allows the user to Add, Edit or Inactivate a job type.
 
@@ -206,7 +182,7 @@ The Job Type page allows the user to Add, Edit or Inactivate a job type.
 5. To save any changes made to a new or existing job type, the user must click the Add/Save button.
 6. Cancel any changes that have not been saved and return to the last page visited.
 
-### Pour Types [↑](#table-of-contents)
+### Pour Types
 
 The Pour Type page allows the user to Add, Edit or Inactivate a pour type. The list of pour types are sorted by their status of Active, Inactive and All.
 
@@ -227,7 +203,7 @@ The Pour Type page allows the user to Add, Edit or Inactivate a pour type. The l
 6. To save any changes made to a new or existing pour type, the user must click the Add/Save button.
 7. Cancel any changes that have not been saved and return to the last page visited.
 
-### Units [↑](#table-of-contents)
+### Units
 
 The Units page allows the user to Add, Edit or Inactivate a unit. The list of units is sorted by their status of Active, Inactive and All.
 
@@ -251,7 +227,7 @@ The Units page allows the user to Add, Edit or Inactivate a unit. The list of un
 9. To save any changes made to a new or existing unit, the user must click the Add/Save button.
 10. Cancel any changes that have not been saved and return to the last page visited.
 
-### Customer [↑](#table-of-contents)
+### Customer
 
 The Customer page allows the user to Add, Edit or Inactivate a customer. The list of customers is sorted by their status of Active, Inactive and All.
 
@@ -272,7 +248,7 @@ The Customer page allows the user to Add, Edit or Inactivate a customer. The lis
 6. To save any changes made to a new or existing customer, the user must click the Add/Save button.
 7. Cancel any changes that have not been saved and return to the last page visited.
 
-### Operator [↑](#table-of-contents)
+### Operator
 
 The Operator page allows the user to Add, Edit or Inactivate an operator. The list of operators is sorted by their status of Active, Inactive and All.
 
@@ -296,7 +272,7 @@ The Operator page allows the user to Add, Edit or Inactivate an operator. The li
 
 ![Message Service Provider Modal][message-service-provider-modal]
 
-### Company Information [↑](#table-of-contents)
+### Company Information
 
 This page contains all the information about the Company.
 
@@ -309,7 +285,7 @@ This page contains all the information about the Company.
 5. This button saves all changes made on this page.
 6. Cancel changes and return to last page visited.
 
-## Reporting [↑](#table-of-contents)
+## Reporting
 
 All reports have the same header with print button, refresh, page selector, zoom, and page setup. The default top navigation allows access to other pages, reports, job creator, and job board.
 
@@ -323,7 +299,7 @@ This changes how the reports look and allows the user to change margins, orienta
 
 ![Page Layout Settings][page-layout-settings]
 
-### Customer Job History [↑](#table-of-contents)
+### Customer Job History
 
 For the customer job history, the user can search for a customer by finding them in the drop down. They can also filter the results by using "Search by Unit Sent" which will filter the results based on the unit.
 
@@ -333,7 +309,7 @@ The Customer Job History displays all of a customer's history that have use the 
 
 ![Job History Report][job-history-report]
 
-### Amount Pumped by Job Type [↑](#table-of-contents)
+### Amount Pumped by Job Type
 
 ![Job Type Filter][job-type-filter]
 
@@ -350,7 +326,7 @@ This displays the filtered items based off of:
 - Hourly rate for the job
 - Flat rate
 
-### Amount Pumped by Pump and Date [↑](#table-of-contents)
+### Amount Pumped by Pump and Date
 
 ![Date Range Filter][date-range-filter]
 
@@ -360,13 +336,13 @@ This allows the user to filter for a select range to see the amounts that were p
 
 This displays all units used within the time frame and their pumped amounts.
 
-### Amount Poured by Unit Since Pipe Change [↑](#table-of-contents)
+### Amount Poured by Unit Since Pipe Change
 
 ![Pipe Change Report][pipe-change-report]
 
 This report displays all units, amounts poured for boom and deck pipes, and last pipe change date.
 
-### Job Count Details [↑](#table-of-contents)
+### Job Count Details
 
 ![Customer Filter][customer-filter]
 
@@ -376,7 +352,7 @@ This allows the user to filter for a specific customer.
 
 This displays the total jobs for a customer.
 
-### Customer History [↑](#table-of-contents)
+### Customer History
 
 The user can access customer history through the right-click menu on a job with their desired customer by selecting "Customer History".
 

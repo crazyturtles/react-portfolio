@@ -25,7 +25,7 @@ const Skills = () => {
 	return (
 		<section className="bg-gray-50 py-section">
 			<div className="container mx-auto px-4">
-				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary">
+				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
 					Skills & Technologies
 				</h2>
 				<div className="grid gap-8 md:grid-cols-3">

@@ -6,7 +6,7 @@ const Hero = () => {
 	};
 
 	return (
-		<section className="h-hero flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
+		<section className="relative h-hero flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
 			<div className="container mx-auto px-4">
 				<div className="animate-fade-in space-y-6 text-center">
 					<h1 className="font-heading text-5xl font-bold text-primary">
@@ -15,16 +15,16 @@ const Hero = () => {
 					<p className="mx-auto max-w-2xl text-xl text-secondary">
 						Full-stack developer specializing in modern web technologies
 					</p>
-					<button
-						onClick={scrollToProjects}
-						className="group flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white transition-all hover:bg-primary/90"
-						type="button"
-					>
-						View My Work
-						<ArrowDown className="transition-transform group-hover:translate-y-1" />
-					</button>
 				</div>
 			</div>
+			<button
+				onClick={scrollToProjects}
+				className="absolute bottom-8 left-8 z-40 flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white transition-all hover:bg-primary/90 shadow-lg"
+				type="button"
+			>
+				View My Work
+				<ArrowDown className="transition-transform group-hover:translate-y-1" />
+			</button>
 		</section>
 	);
 };

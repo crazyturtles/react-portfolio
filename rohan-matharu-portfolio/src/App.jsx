@@ -9,7 +9,7 @@ const MainLayout = () => (
 	<main className="min-h-screen bg-white">
 		<nav className="fixed top-0 z-50 w-full bg-white/80 px-4 py-4 backdrop-blur">
 			<div className="container mx-auto flex items-center justify-between">
-				<span className="font-heading text-xl font-bold text-primary">
+				<span className="font-heading text-xl font-bold text-primary select-none">
 					Rohan Matharu
 				</span>
 				<div className="space-x-6">
