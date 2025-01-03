@@ -36,14 +36,36 @@ The system serves administrators and dispatchers in concrete pumping companies, 
 The development prioritized seamless integration with existing business applications while streamlining features to focus on the most utilized functions.`,
 	},
 	{
-		title: "Project Two",
-		description: "Mobile-first e-commerce platform",
-		tags: ["Next.js", "Tailwind", "Stripe"],
-		github: "https://github.com/yourusername/project-two",
-		live: "https://project-two.com",
-		introduction: "",
-		tasks: "",
-		reflections: "",
+		title: "Man United Season Tracker",
+		description:
+			"A web application that tracks and manages Manchester United match data. Features include live match tracking, detailed statistics, comprehensive match histories, and an administrative system for data management.",
+		tags: ["PHP", "MySQL", "Bootstrap"],
+		manualPath: "man-utd-season-tracker",
+		introduction: `Man United Season Tracker is a comprehensive match tracking system that allows fans and administrators to monitor Manchester United's season performance. The system provides detailed insights into matches, team statistics, and formation details.
+
+The application serves both general users who can view match histories and statistics, as well as administrators who can manage match records through a secure administrative interface.`,
+		tasks: `- Match Management System
+  - Implemented comprehensive match recording capabilities
+  - Developed formation tracking with player positioning
+  - Created statistical analysis features
+
+- User Interface Development
+  - Designed responsive match cards and detailed views
+  - Built interactive formation displays
+  - Implemented intuitive navigation systems
+
+- Administrative Features
+  - Created secure admin authentication system
+  - Developed match CRUD operations
+  - Implemented image upload and processing
+
+- Data Management
+  - Designed efficient database structure
+  - Implemented data validation systems
+  - Created secure data handling procedures`,
+		reflections: `This project showcases the implementation of a sports-focused content management system that balances user accessibility with administrative functionality. The focus was on creating an intuitive interface while maintaining robust data management capabilities.
+
+The development emphasized proper data structuring and validation while providing an engaging user experience for both viewers and administrators.`,
 	},
 ];
 
@@ -84,15 +106,17 @@ const Projects = () => {
 								))}
 							</div>
 							<div className="flex gap-4">
-								<a
-									href={project.github}
-									target="_blank"
-									className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
-									rel="noreferrer"
-									onClick={(e) => e.stopPropagation()}
-								>
-									<Github size={20} /> Code
-								</a>
+								{project.github && (
+									<a
+										href={project.github}
+										target="_blank"
+										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
+										rel="noreferrer"
+										onClick={(e) => e.stopPropagation()}
+									>
+										<Github size={20} /> Code
+									</a>
+								)}
 								{project.live && (
 									<a
 										href={project.live}

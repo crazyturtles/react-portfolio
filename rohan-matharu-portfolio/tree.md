@@ -50,7 +50,21 @@
 │   ├───vite.svg
 ├───public
 │   ├───img
+│   │   ├───manutd-tracker-logo.png
 │   │   ├───pumpmaster-logo-2.1-transparent.png
+│   ├───man-utd-tracker-images
+│   │   ├───add-match-form.gif
+│   │   ├───admin-dashboard.png
+│   │   ├───admin-login.png
+│   │   ├───browse-matches-overview.png
+│   │   ├───delete-match.gif
+│   │   ├───edit-match-form.gif
+│   │   ├───formation-display.png
+│   │   ├───landing-page-overview.png
+│   │   ├───latest-match-card.png
+│   │   ├───login-form.png
+│   │   ├───match-details-view.gif
+│   │   ├───quick-stats.png
 │   ├───manual-images
 │   │   ├───company-information-page.png
 │   │   ├───contact-selection-popup.png
@@ -89,6 +103,8 @@
 │   │   ├───units-management-page.png
 │   │   ├───user-profile-submenu.png
 │   ├───manuals
+│   │   ├───man-utd-season-tracker-content.md
+│   │   ├───man-utd-season-tracker-toc.md
 │   │   ├───pumpmaster-content.md
 │   │   ├───pumpmaster-toc.md
 │   ├───vite.svg
@@ -99,6 +115,7 @@
 │   │   ├───contact.jsx
 │   │   ├───hero.jsx
 │   │   ├───manual.jsx
+│   │   ├───ProjectModal.jsx
 │   │   ├───projects.jsx
 │   │   ├───skills.jsx
 │   ├───pages

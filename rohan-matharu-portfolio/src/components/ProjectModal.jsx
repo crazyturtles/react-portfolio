@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { X, Github, ExternalLink, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 	const [activeTab, setActiveTab] = useState("introduction");
+	const [currentProject, setCurrentProject] = useState(project);
 
-	if (!isOpen) return null;
+	useEffect(() => {
+		setCurrentProject(project);
+	}, [project]);
 
-	const currentIndex = projects.findIndex((p) => p.title === project.title);
+	if (!isOpen || !currentProject) return null;
+
+	const currentIndex = projects.findIndex(
+		(p) => p.title === currentProject.title,
+	);
 	const nextProject = projects[(currentIndex + 1) % projects.length];
+
+	const handleNextProject = () => {
+		setCurrentProject(nextProject);
+		setActiveTab("introduction");
+	};
 
 	const tabs = ["introduction", "tasks", "reflections"];
 
@@ -25,7 +37,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 				</button>
 
 				<h2 className="mb-6 font-heading text-3xl font-bold">
-					{project.title}
+					{currentProject.title}
 				</h2>
 
 				<div className="mb-6 flex gap-4 border-b">
@@ -49,7 +61,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					{activeTab === "introduction" && (
 						<div>
 							<h3 className="mb-4">Introduction</h3>
-							<ReactMarkdown>{project.introduction}</ReactMarkdown>
+							<ReactMarkdown>{currentProject.introduction}</ReactMarkdown>
 						</div>
 					)}
 
@@ -57,7 +69,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 						<div>
 							<h3 className="mb-4">Tasks</h3>
 							<div className="space-y-4 pl-4">
-								{project.tasks.split("\n\n").map((section) => (
+								{currentProject.tasks.split("\n\n").map((section) => (
 									<div key={section.trim()} className="space-y-2">
 										{section.split("\n").map((line) => {
 											const indentLevel = line.match(/^\s*/)[0].length;
@@ -83,24 +95,26 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					{activeTab === "reflections" && (
 						<div>
 							<h3 className="mb-4">Reflections</h3>
-							<ReactMarkdown>{project.reflections}</ReactMarkdown>
+							<ReactMarkdown>{currentProject.reflections}</ReactMarkdown>
 						</div>
 					)}
 				</div>
 
 				<div className="mt-8 flex items-center justify-between border-t pt-4">
 					<div className="flex gap-4">
-						<a
-							href={project.github}
-							target="_blank"
-							className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
-							rel="noreferrer"
-						>
-							<Github size={20} /> Code
-						</a>
-						{project.live && (
+						{currentProject.github && (
 							<a
-								href={project.live}
+								href={currentProject.github}
+								target="_blank"
+								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+								rel="noreferrer"
+							>
+								<Github size={20} /> Code
+							</a>
+						)}
+						{currentProject.live && (
+							<a
+								href={currentProject.live}
 								target="_blank"
 								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
 								rel="noreferrer"
@@ -108,9 +122,9 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 								<ExternalLink size={20} /> Live Demo
 							</a>
 						)}
-						{project.manualPath && (
+						{currentProject.manualPath && (
 							<Link
-								to={`/manuals/${project.manualPath}`}
+								to={`/manuals/${currentProject.manualPath}`}
 								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
 							>
 								<BookOpen size={20} /> View Manual
@@ -119,10 +133,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					</div>
 
 					<button
-						onClick={() => {
-							setActiveTab("introduction");
-							project = nextProject;
-						}}
+						onClick={handleNextProject}
 						className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
 						type="button"
 					>
