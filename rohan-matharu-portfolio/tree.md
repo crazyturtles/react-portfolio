@@ -1,66 +1,119 @@
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\.gitignore
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\biome.json
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\index.html
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\jsconfig.json
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\package-lock.json
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\package.json
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\postcss.config.js
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\README.md
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\tailwind.config.js
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\vite.config.js
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\img
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manuals
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\vite.svg
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\img\pumpmaster-logo-2.1-transparent.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\company-information-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\contact-selection-popup.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\create-user-form.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-history-2.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-history-view.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-history.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-job-history-report.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-management-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\customer-select-modal.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\date-range-filter.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\date-select-modal.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-board-main-view.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-board-right-click-menu.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-board-time-display.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-count-summary.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-creation-form.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-history-report.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-modification-form.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-search-interface.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-status-view.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\job-types-management.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\login-screen.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\message-service-provider-modal.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\no-search-customer-select-modal.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\operator-management-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\page-layout-settings.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\pipe-change-report.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\pour-types-management.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\pumped-amount-report.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\report-header.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\search-by-ticket.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\supplier-management-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\technician-management-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\unit-pumped-amounts.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\units-management-page.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manual-images\user-profile-submenu.png
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\public\manuals\pumpmaster.md
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\assets
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\pages
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\App.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\index.css
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\main.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\assets\react.svg
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components\contact.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components\hero.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components\manual.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components\projects.jsx
-C:\Users\rohan\Documents\github-repos\react-portfolio\rohan-matharu-portfolio\src\components\skills.jsx
+├───.vscode
+│   ├───launch.json
+├───dist
+│   ├───assets
+│   │   ├───index-CtGCUxEa.css
+│   │   ├───index-DD5NNv3S.js
+│   ├───img
+│   │   ├───pumpmaster-logo-2.1-transparent.png
+│   ├───manual-images
+│   │   ├───company-information-page.png
+│   │   ├───contact-selection-popup.png
+│   │   ├───create-user-form.png
+│   │   ├───customer-history-2.png
+│   │   ├───customer-history-view.png
+│   │   ├───customer-history.png
+│   │   ├───customer-job-history-report.png
+│   │   ├───customer-management-page.png
+│   │   ├───customer-select-modal.png
+│   │   ├───date-range-filter.png
+│   │   ├───date-select-modal.png
+│   │   ├───job-board-main-view.png
+│   │   ├───job-board-right-click-menu.png
+│   │   ├───job-board-time-display.png
+│   │   ├───job-count-summary.png
+│   │   ├───job-creation-form.png
+│   │   ├───job-history-report.png
+│   │   ├───job-modification-form.png
+│   │   ├───job-search-interface.png
+│   │   ├───job-status-view.png
+│   │   ├───job-types-management.png
+│   │   ├───login-screen.png
+│   │   ├───message-service-provider-modal.png
+│   │   ├───no-search-customer-select-modal.png
+│   │   ├───operator-management-page.png
+│   │   ├───page-layout-settings.png
+│   │   ├───pipe-change-report.png
+│   │   ├───pour-types-management.png
+│   │   ├───pumped-amount-report.png
+│   │   ├───report-header.png
+│   │   ├───search-by-ticket.png
+│   │   ├───supplier-management-page.png
+│   │   ├───technician-management-page.png
+│   │   ├───unit-pumped-amounts.png
+│   │   ├───units-management-page.png
+│   │   ├───user-profile-submenu.png
+│   ├───manuals
+│   │   ├───pumpmaster-content.md
+│   │   ├───pumpmaster-toc.md
+│   ├───index.html
+│   ├───vite.svg
+├───public
+│   ├───img
+│   │   ├───pumpmaster-logo-2.1-transparent.png
+│   ├───manual-images
+│   │   ├───company-information-page.png
+│   │   ├───contact-selection-popup.png
+│   │   ├───create-user-form.png
+│   │   ├───customer-history-2.png
+│   │   ├───customer-history-view.png
+│   │   ├───customer-history.png
+│   │   ├───customer-job-history-report.png
+│   │   ├───customer-management-page.png
+│   │   ├───customer-select-modal.png
+│   │   ├───date-range-filter.png
+│   │   ├───date-select-modal.png
+│   │   ├───job-board-main-view.png
+│   │   ├───job-board-right-click-menu.png
+│   │   ├───job-board-time-display.png
+│   │   ├───job-count-summary.png
+│   │   ├───job-creation-form.png
+│   │   ├───job-history-report.png
+│   │   ├───job-modification-form.png
+│   │   ├───job-search-interface.png
+│   │   ├───job-status-view.png
+│   │   ├───job-types-management.png
+│   │   ├───login-screen.png
+│   │   ├───message-service-provider-modal.png
+│   │   ├───no-search-customer-select-modal.png
+│   │   ├───operator-management-page.png
+│   │   ├───page-layout-settings.png
+│   │   ├───pipe-change-report.png
+│   │   ├───pour-types-management.png
+│   │   ├───pumped-amount-report.png
+│   │   ├───report-header.png
+│   │   ├───search-by-ticket.png
+│   │   ├───supplier-management-page.png
+│   │   ├───technician-management-page.png
+│   │   ├───unit-pumped-amounts.png
+│   │   ├───units-management-page.png
+│   │   ├───user-profile-submenu.png
+│   ├───manuals
+│   │   ├───pumpmaster-content.md
+│   │   ├───pumpmaster-toc.md
+│   ├───vite.svg
+├───src
+│   ├───assets
+│   │   ├───react.svg
+│   ├───components
+│   │   ├───contact.jsx
+│   │   ├───hero.jsx
+│   │   ├───manual.jsx
+│   │   ├───projects.jsx
+│   │   ├───skills.jsx
+│   ├───pages
+│   ├───App.jsx
+│   ├───index.css
+│   ├───main.jsx
+├───.env
+├───.gitignore
+├───biome.json
+├───index.html
+├───jsconfig.json
+├───package-lock.json
+├───package.json
+├───postcss.config.js
+├───README.md
+├───tailwind.config.js
+├───tree.md
+├───vite.config.js

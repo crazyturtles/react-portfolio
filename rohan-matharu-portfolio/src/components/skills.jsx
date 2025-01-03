@@ -1,4 +1,4 @@
-import { Code2, Database, Palette, BookOpen } from "lucide-react";
+import { BookOpen, Code2, Database, Palette } from "lucide-react";
 
 const skillCategories = [
 	{

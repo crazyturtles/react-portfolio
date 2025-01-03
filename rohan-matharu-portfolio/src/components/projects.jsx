@@ -1,5 +1,7 @@
-import { ExternalLink, Github, BookOpen } from "lucide-react";
+import { BookOpen, ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import ProjectModal from "./ProjectModal";
 
 const projects = [
 	{
@@ -9,6 +11,29 @@ const projects = [
 		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS"],
 		github: "https://github.com/crazyturtles/2024-Fall-PlanetCom-Sept-Dec-2024",
 		manualPath: "pumpmaster",
+		introduction: `PumpMaster V3 is a cloud-based upgrade to PlanetCom's job listing and dispatch application. Developed for PlanetCom, a company with 22+ years in managed IT services, this version transforms the original on-premises desktop application into a modern web application.
+
+The system serves administrators and dispatchers in concrete pumping companies, enabling them to manage jobs, track operators, and handle customer information efficiently.`,
+		tasks: `- Desktop to Web Migration
+  - Transformed on-premises application into cloud-ready webapp
+  - Enabled remote accessibility
+
+- Security Enhancements
+  - Implemented user authentication system
+  - Added role-based access controls
+  - Integrated modern security protocols
+
+- UI/UX Improvements
+  - Redesigned interface for better workflow efficiency
+  - Enhanced visual design and color scheme
+
+- System Architecture
+  - Built scalable architecture for future growth
+  - Developed account management system
+  - Streamlined feature integration with existing business tools`,
+		reflections: `This project represented a significant modernization effort, building upon a system that had served as a cornerstone of operations for over two decades. The focus was on maintaining core functionality while introducing modern capabilities around scalability, security, and cloud accessibility.
+
+The development prioritized seamless integration with existing business applications while streamlining features to focus on the most utilized functions.`,
 	},
 	{
 		title: "Project Two",
@@ -16,10 +41,15 @@ const projects = [
 		tags: ["Next.js", "Tailwind", "Stripe"],
 		github: "https://github.com/yourusername/project-two",
 		live: "https://project-two.com",
+		introduction: "",
+		tasks: "",
+		reflections: "",
 	},
 ];
 
 const Projects = () => {
+	const [selectedProject, setSelectedProject] = useState(null);
+
 	return (
 		<section id="projects" className="py-section">
 			<div className="container mx-auto px-4">
@@ -30,7 +60,11 @@ const Projects = () => {
 					{projects.map((project, index) => (
 						<div
 							key={project.title}
-							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl"
+							onClick={() => setSelectedProject(project)}
+							onKeyDown={(e) => {
+								if (e.key === "Enter") setSelectedProject(project);
+							}}
+							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
 							<h3 className="mb-2 font-heading text-2xl font-bold select-none">
@@ -55,6 +89,7 @@ const Projects = () => {
 									target="_blank"
 									className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
 									rel="noreferrer"
+									onClick={(e) => e.stopPropagation()}
 								>
 									<Github size={20} /> Code
 								</a>
@@ -64,6 +99,7 @@ const Projects = () => {
 										target="_blank"
 										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
 										rel="noreferrer"
+										onClick={(e) => e.stopPropagation()}
 									>
 										<ExternalLink size={20} /> Live Demo
 									</a>
@@ -72,6 +108,7 @@ const Projects = () => {
 									<Link
 										to={`/manuals/${project.manualPath}`}
 										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
+										onClick={(e) => e.stopPropagation()}
 									>
 										<BookOpen size={20} /> View Manual
 									</Link>
@@ -81,6 +118,12 @@ const Projects = () => {
 					))}
 				</div>
 			</div>
+			<ProjectModal
+				project={selectedProject}
+				projects={projects}
+				isOpen={!!selectedProject}
+				onClose={() => setSelectedProject(null)}
+			/>
 		</section>
 	);
 };

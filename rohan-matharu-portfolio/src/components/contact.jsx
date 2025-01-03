@@ -1,6 +1,6 @@
-import { Github, Linkedin, Mail, Send } from "lucide-react";
-import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({

@@ -1,9 +1,9 @@
+import { ArrowLeft, X } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { Link, useParams } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { ArrowLeft, X } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
 
 const ImageModal = ({ src, alt, isOpen, onClose }) => {
 	if (!isOpen) return null;
