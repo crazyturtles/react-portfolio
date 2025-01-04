@@ -40,6 +40,7 @@ The development prioritized seamless integration with existing business applicat
 		description:
 			"A web application that tracks and manages Manchester United match data. Features include live match tracking, detailed statistics, comprehensive match histories, and an administrative system for data management.",
 		tags: ["PHP", "MySQL", "Bootstrap"],
+		github: "https://github.com/crazyturtles/catalogue-final-rohan-matharu",
 		manualPath: "man-utd-season-tracker",
 		introduction: `Man United Season Tracker is a comprehensive match tracking system that allows fans and administrators to monitor Manchester United's season performance. The system provides detailed insights into matches, team statistics, and formation details.
 
@@ -72,6 +73,7 @@ The development emphasized proper data structuring and validation while providin
 		description:
 			"A Blazor-based inventory management system for eBike parts and service tracking. Features purchase order management, inventory control, vendor relationship management, and automated reordering capabilities.",
 		tags: ["C#", "Blazor", "HTML", "CSS"],
+		github: "https://github.com/crazyturtles/dmit-2018-final-project",
 		manualPath: "ebike",
 		introduction:
 			"A comprehensive web application built with Blazor for managing eBike parts inventory, purchases, sales, and servicing. The system handles vendor relationships, purchase orders, and inventory tracking while providing a modern, responsive interface for staff operations.",

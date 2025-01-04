@@ -21,7 +21,7 @@ The application features a clean, intuitive layout with a dark-themed sidebar na
   - Return - Handle product returns
 - Receiving - Inventory intake
 
-### Purchase Order Management
+## Purchase Order Management
 The main workspace displays the purchasing interface with essential controls:
 - Vendor selection dropdown
 - Find Order search functionality 
@@ -31,8 +31,6 @@ The main workspace displays the purchasing interface with essential controls:
   - Place Order - Submit orders to vendors
   - Delete Order - Remove existing orders
   - Clear - Reset form fields
-
-## Purchase Order Management 
 
 ### Vendor Selection
 ![Vendor Dropdown](/ebike-images/vendor-selection.png)
