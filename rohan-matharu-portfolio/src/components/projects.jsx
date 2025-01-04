@@ -67,6 +67,31 @@ The application serves both general users who can view match histories and stati
 
 The development emphasized proper data structuring and validation while providing an engaging user experience for both viewers and administrators.`,
 	},
+	{
+		title: "eBike Management System",
+		description:
+			"A Blazor-based inventory management system for eBike parts and service tracking. Features purchase order management, inventory control, vendor relationship management, and automated reordering capabilities.",
+		tags: ["C#", "Blazor", "HTML", "CSS"],
+		manualPath: "ebike",
+		introduction:
+			"A comprehensive web application built with Blazor for managing eBike parts inventory, purchases, sales, and servicing. The system handles vendor relationships, purchase orders, and inventory tracking while providing a modern, responsive interface for staff operations.",
+		tasks: `- Inventory Management
+ - Implemented purchase order lifecycle
+ - Created vendor management system
+ - Developed inventory tracking
+
+- Purchase Order System
+ - Built automated reordering system
+ - Added tax calculation features
+ - Integrated order confirmation workflow
+
+- Interface Development
+ - Created responsive Blazor components
+ - Implemented real-time updates
+ - Built intuitive navigation system`,
+		reflections:
+			"This project demonstrates effective implementation of a business-critical inventory management system using Blazor. The focus was on creating an efficient and user-friendly interface while maintaining robust backend processing capabilities.",
+	},
 ];
 
 const Projects = () => {
