@@ -8,7 +8,7 @@ const projects = [
 		title: "PumpMaster V3",
 		description:
 			"A comprehensive web application for concrete pumping companies to manage daily operations, scheduling, and reporting. Features include job management, real-time scheduling, customer tracking, and detailed reporting systems.",
-		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS"],
+		tags: ["React", "Node.js", "SQL", "Jest", "TailwindCSS", "BiomeJS"],
 		github: "https://github.com/crazyturtles/2024-Fall-PlanetCom-Sept-Dec-2024",
 		manualPath: "pumpmaster",
 		introduction: `PumpMaster V3 is a cloud-based upgrade to PlanetCom's job listing and dispatch application. Developed for PlanetCom, a company with 22+ years in managed IT services, this version transforms the original on-premises desktop application into a modern web application.
