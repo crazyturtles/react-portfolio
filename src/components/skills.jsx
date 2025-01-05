@@ -10,7 +10,15 @@ const skillCategories = [
 	{
 		title: "Backend",
 		icon: <Database size={24} />,
-		skills: ["C#", ".NET", "Node.js", "SQL Server", "Python", "Visual Basic"],
+		skills: [
+			"C#",
+			".NET",
+			"Node.js",
+			"SQL Server",
+			"Python",
+			"Visual Basic",
+			"PHP",
+		],
 		color: "secondary",
 	},
 	{
