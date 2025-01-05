@@ -1,4 +1,4 @@
-import { ArrowLeft, X } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
@@ -12,26 +12,33 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
 		if (e.key === "Escape") onClose();
 	};
 
-	const handleClick = () => {
-		onClose();
-	};
-
 	return (
 		<div
 			className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-			onClick={handleClick}
-			onKeyDown={handleKeyDown}
+			onClick={onClose}
+			onKeyDown={(e) => {
+				handleKeyDown(e);
+				if (e.key === "Enter" || e.key === " ") {
+					e.preventDefault();
+					onClose();
+				}
+			}}
 			aria-modal="true"
 			aria-label={`Image preview: ${alt}`}
 		>
 			<div
 				className="relative max-h-[90vh] max-w-[90vw] overflow-auto bg-white p-4 rounded-lg"
 				onClick={(e) => e.stopPropagation()}
-				onKeyDown={handleKeyDown}
+				onKeyDown={(e) => {
+					handleKeyDown(e);
+					if (e.key === "Enter" || e.key === " ") {
+						e.preventDefault();
+						onClose();
+					}
+				}}
 			>
 				<button
 					onClick={onClose}
-					onKeyDown={handleKeyDown}
 					className="absolute right-2 top-2 p-1 rounded-full hover:bg-gray-100"
 					aria-label="Close image preview"
 					type="button"
@@ -52,6 +59,7 @@ const Manual = () => {
 	const [content, setContent] = useState("");
 	const [toc, setToc] = useState("");
 	const [modalImage, setModalImage] = useState(null);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const { projectId } = useParams();
 
 	useEffect(() => {
@@ -93,6 +101,7 @@ const Manual = () => {
 				top: offsetPosition,
 				behavior: "smooth",
 			});
+			setIsMenuOpen(false);
 		}
 	};
 
@@ -115,24 +124,15 @@ const Manual = () => {
 						);
 					},
 					li: ({ children }) => <li>{children}</li>,
-					a: ({ href, children }) => {
-						const handleKeyDown = (e) => {
-							if (e.key === "Enter") {
-								handleSmoothScroll(e, href);
-							}
-						};
-
-						return (
-							<a
-								href={href}
-								onClick={(e) => handleSmoothScroll(e, href)}
-								onKeyDown={handleKeyDown}
-								className="block py-1 text-sm text-secondary hover:text-primary transition-colors"
-							>
-								{children}
-							</a>
-						);
-					},
+					a: ({ href, children }) => (
+						<a
+							href={href}
+							onClick={(e) => handleSmoothScroll(e, href)}
+							className="block py-1 text-sm text-secondary hover:text-primary transition-colors"
+						>
+							{children}
+						</a>
+					),
 				}}
 			>
 				{markdownContent}
@@ -157,7 +157,7 @@ const Manual = () => {
 	return (
 		<div className="min-h-screen bg-gray-50">
 			<nav className="fixed top-0 z-50 w-full bg-white/80 px-4 py-4 backdrop-blur h-16">
-				<div className="container mx-auto">
+				<div className="container mx-auto flex justify-between items-center">
 					<Link
 						to="/"
 						className="inline-flex items-center gap-2 text-primary hover:text-primary/80"
@@ -165,13 +165,61 @@ const Manual = () => {
 						<ArrowLeft size={20} />
 						Back to Projects
 					</Link>
+					<button
+						onClick={() => setIsMenuOpen(!isMenuOpen)}
+						onKeyDown={(e) => {
+							if (e.key === "Enter" || e.key === " ") {
+								e.preventDefault();
+								setIsMenuOpen(!isMenuOpen);
+							}
+						}}
+						className="lg:hidden p-2 text-primary hover:bg-gray-100 rounded-lg"
+						aria-label="Toggle table of contents"
+						tabIndex={0}
+						type="button"
+					>
+						<Menu size={24} />
+					</button>
 				</div>
 			</nav>
 
 			<div className="container mx-auto flex gap-8 px-4 py-20">
-				<aside className="sticky top-24 h-[calc(100vh-6rem)] w-64 overflow-y-auto rounded-lg bg-white p-6 shadow-lg">
+				{/* Desktop ToC */}
+				<aside className="hidden lg:block sticky top-24 h-[calc(100vh-6rem)] w-64 overflow-y-auto rounded-lg bg-white p-6 shadow-lg">
 					{renderToc(toc)}
 				</aside>
+
+				{/* Mobile ToC */}
+				<div
+					className={`lg:hidden fixed inset-0 z-40 transform ${
+						isMenuOpen ? "translate-x-0" : "-translate-x-full"
+					} transition-transform duration-300 ease-in-out`}
+				>
+					<div
+						className="absolute inset-0 bg-black/50"
+						onClick={() => setIsMenuOpen(false)}
+						onKeyDown={(e) => {
+							if (e.key === "Enter" || e.key === " ") {
+								e.preventDefault();
+								setIsMenuOpen(false);
+							}
+						}}
+						tabIndex={0}
+						role="button"
+						aria-label="Close menu overlay"
+					/>
+					<aside className="relative h-full w-64 overflow-y-auto bg-white p-6 shadow-lg">
+						<button
+							onClick={() => setIsMenuOpen(false)}
+							className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100"
+							aria-label="Close menu"
+							type="button"
+						>
+							<X size={24} />
+						</button>
+						{renderToc(toc)}
+					</aside>
+				</div>
 
 				<main className="flex-1">
 					<div className="rounded-lg bg-white p-8 shadow-lg">
@@ -182,24 +230,14 @@ const Manual = () => {
 							components={{
 								h2: createHeadingComponent(2),
 								h3: createHeadingComponent(3),
-								img: ({ node, ...props }) => {
-									const handleKeyDown = (e) => {
-										if (e.key === "Enter") {
-											setModalImage(props);
-										}
-									};
-
-									return (
-										<img
-											{...props}
-											alt={props.alt || "Documentation image"}
-											className="cursor-pointer hover:opacity-90 transition-opacity"
-											onClick={() => setModalImage(props)}
-											onKeyDown={handleKeyDown}
-											aria-label={`View larger version of ${props.alt || "image"}`}
-										/>
-									);
-								},
+								img: ({ node, ...props }) => (
+									<img
+										{...props}
+										alt={props.alt || "Documentation image"}
+										className="cursor-pointer hover:opacity-90 transition-opacity"
+										onClick={() => setModalImage(props)}
+									/>
+								),
 							}}
 						>
 							{content}
