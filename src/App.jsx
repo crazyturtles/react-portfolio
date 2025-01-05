@@ -16,13 +16,18 @@ const MainLayout = () => (
 				</span>
 				<div className="space-x-6">
 					{["Projects", "Skills", "Contact"].map((item) => (
-						<a
+						<button
 							key={item}
-							href={`#${item.toLowerCase()}`}
+							onClick={() => {
+								document
+									.getElementById(item.toLowerCase())
+									?.scrollIntoView({ behavior: "smooth" });
+							}}
 							className="text-secondary transition-colors hover:text-primary select-none"
+							type="button"
 						>
 							{item}
-						</a>
+						</button>
 					))}
 				</div>
 			</div>
