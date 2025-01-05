@@ -94,6 +94,13 @@ The development emphasized proper data structuring and validation while providin
 		reflections:
 			"This project demonstrates effective implementation of a business-critical inventory management system using Blazor. The focus was on creating an efficient and user-friendly interface while maintaining robust backend processing capabilities.",
 	},
+	{
+		title: "RMCodes.dev",
+		description:
+			"A responsive portfolio website built with modern web technologies, featuring project showcases, skills section, and a contact form with email integration.",
+		tags: ["React", "TailwindCSS", "EmailJS", "Vite", "BiomeJS"],
+		github: "https://github.com/crazyturtles/react-portfolio",
+	},
 ];
 
 const Projects = () => {
@@ -109,11 +116,14 @@ const Projects = () => {
 					{projects.map((project, index) => (
 						<div
 							key={project.title}
-							onClick={() => setSelectedProject(project)}
+							onClick={() =>
+								project.introduction && setSelectedProject(project)
+							}
 							onKeyDown={(e) => {
-								if (e.key === "Enter") setSelectedProject(project);
+								if (e.key === "Enter" && project.introduction)
+									setSelectedProject(project);
 							}}
-							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer"
+							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer flex flex-col justify-between"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
 							<h3 className="mb-2 font-heading text-2xl font-bold select-none">
@@ -122,48 +132,50 @@ const Projects = () => {
 							<p className="mb-4 text-secondary select-none">
 								{project.description}
 							</p>
-							<div className="mb-4 flex flex-wrap gap-2">
-								{project.tags.map((tag) => (
-									<span
-										key={tag}
-										className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent select-none"
-									>
-										{tag}
-									</span>
-								))}
-							</div>
-							<div className="flex gap-4">
-								{project.github && (
-									<a
-										href={project.github}
-										target="_blank"
-										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
-										rel="noreferrer"
-										onClick={(e) => e.stopPropagation()}
-									>
-										<Github size={20} /> Code
-									</a>
-								)}
-								{project.live && (
-									<a
-										href={project.live}
-										target="_blank"
-										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
-										rel="noreferrer"
-										onClick={(e) => e.stopPropagation()}
-									>
-										<ExternalLink size={20} /> Live Demo
-									</a>
-								)}
-								{project.manualPath && (
-									<Link
-										to={`/manuals/${project.manualPath}`}
-										className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
-										onClick={(e) => e.stopPropagation()}
-									>
-										<BookOpen size={20} /> View Manual
-									</Link>
-								)}
+							<div>
+								<div className="mb-4 flex flex-wrap gap-2">
+									{project.tags.map((tag) => (
+										<span
+											key={tag}
+											className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent select-none"
+										>
+											{tag}
+										</span>
+									))}
+								</div>
+								<div className="flex gap-4">
+									{project.github && (
+										<a
+											href={project.github}
+											target="_blank"
+											className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
+											rel="noreferrer"
+											onClick={(e) => e.stopPropagation()}
+										>
+											<Github size={20} /> Code
+										</a>
+									)}
+									{project.live && (
+										<a
+											href={project.live}
+											target="_blank"
+											className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
+											rel="noreferrer"
+											onClick={(e) => e.stopPropagation()}
+										>
+											<ExternalLink size={20} /> Live Demo
+										</a>
+									)}
+									{project.manualPath && (
+										<Link
+											to={`/manuals/${project.manualPath}`}
+											className="flex items-center gap-2 text-secondary transition-colors hover:text-primary select-none"
+											onClick={(e) => e.stopPropagation()}
+										>
+											<BookOpen size={20} /> View Manual
+										</Link>
+									)}
+								</div>
 							</div>
 						</div>
 					))}
@@ -171,7 +183,7 @@ const Projects = () => {
 			</div>
 			<ProjectModal
 				project={selectedProject}
-				projects={projects}
+				projects={projects.filter((p) => p.introduction)}
 				isOpen={!!selectedProject}
 				onClose={() => setSelectedProject(null)}
 			/>
