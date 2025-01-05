@@ -98,7 +98,14 @@ The development emphasized proper data structuring and validation while providin
 		title: "RMCodes.dev",
 		description:
 			"A responsive portfolio website built with modern web technologies, featuring project showcases, skills section, and a contact form with email integration.",
-		tags: ["React", "TailwindCSS", "EmailJS", "Vite", "BiomeJS"],
+		tags: [
+			"React",
+			"React Markdown",
+			"TailwindCSS",
+			"EmailJS",
+			"Vite",
+			"BiomeJS",
+		],
 		github: "https://github.com/crazyturtles/react-portfolio",
 	},
 ];
@@ -152,7 +159,7 @@ const Projects = () => {
 											rel="noreferrer"
 											onClick={(e) => e.stopPropagation()}
 										>
-											<Github size={20} /> Code
+											<Github size={20} /> Repo
 										</a>
 									)}
 									{project.live && (
