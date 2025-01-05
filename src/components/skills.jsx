@@ -4,17 +4,7 @@ const skillCategories = [
 	{
 		title: "Frontend",
 		icon: <Palette size={24} />,
-		skills: [
-			"React",
-			"TypeScript",
-			"TailwindCSS",
-			"HTML5",
-			"CSS3",
-			"JavaScript",
-			"Bootstrap",
-			"Blazor",
-			"SVG",
-		],
+		skills: ["React", "TypeScript", "HTML5", "CSS3", "JavaScript", "Blazor"],
 		color: "primary",
 	},
 	{
@@ -34,28 +24,13 @@ const skillCategories = [
 	{
 		title: "Development Tools",
 		icon: <Code2 size={24} />,
-		skills: [
-			"VS Code",
-			"Visual Studio",
-			"Git",
-			"Vite",
-			"BiomeJS",
-			"React Router",
-			"EmailJS",
-			"Netlify",
-		],
+		skills: ["VS Code", "Visual Studio", "Git", "Vite", "BiomeJS", "Netlify"],
 		color: "accent",
 	},
 	{
 		title: "Testing & DevOps",
 		icon: <BookOpen size={24} />,
-		skills: [
-			"Jest",
-			"Entity Framework",
-			"Python",
-			"Advanced JavaScript",
-			"Node.js",
-		],
+		skills: ["Jest", "Entity Framework", "Python"],
 		color: "primary",
 	},
 ];
@@ -71,15 +46,17 @@ const Skills = () => {
 					{skillCategories.map((category, index) => (
 						<div
 							key={category.title}
-							className="animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl select-none"
+							className="animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl select-none flex flex-col"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
-							<div className={`mb-4 text-${category.color}`}>
-								{category.icon}
+							<div>
+								<div className={`mb-4 text-${category.color}`}>
+									{category.icon}
+								</div>
+								<h3 className="mb-4 font-heading text-2xl font-bold select-none">
+									{category.title}
+								</h3>
 							</div>
-							<h3 className="mb-4 font-heading text-2xl font-bold select-none">
-								{category.title}
-							</h3>
 							<div className="flex flex-wrap gap-2">
 								{category.skills.map((skill) => (
 									<span
