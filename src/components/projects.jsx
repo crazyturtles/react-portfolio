@@ -13,27 +13,27 @@ export const projects = [
 		manualPath: "pumpmaster",
 		introduction: `PumpMaster V3 is a cloud-based upgrade to PlanetCom's job listing and dispatch application. Developed for PlanetCom, a company with 22+ years in managed IT services, this version transforms the original on-premises desktop application into a modern web application.
 
-		The system serves administrators and dispatchers in concrete pumping companies, enabling them to manage jobs, track operators, and handle customer information efficiently.`,
+The system serves administrators and dispatchers in concrete pumping companies, enabling them to manage jobs, track operators, and handle customer information efficiently.`,
 		tasks: `- Desktop to Web Migration
-		- Transformed on-premises application into cloud-ready webapp
-		- Enabled remote accessibility
+ - Transformed on-premises application into cloud-ready webapp
+ - Enabled remote accessibility
 
-		- Security Enhancements
-		- Implemented user authentication system
-		- Added role-based access controls
-		- Integrated modern security protocols
+- Security Enhancements
+ - Implemented user authentication system
+ - Added role-based access controls
+ - Integrated modern security protocols
 
-		- UI/UX Improvements
-		- Redesigned interface for better workflow efficiency
-		- Enhanced visual design and color scheme
+- UI/UX Improvements
+ - Redesigned interface for better workflow efficiency
+ - Enhanced visual design and color scheme
 
-		- System Architecture
-		- Built scalable architecture for future growth
-		- Developed account management system
-		- Streamlined feature integration with existing business tools`,
+- System Architecture
+ - Built scalable architecture for future growth
+ - Developed account management system
+ - Streamlined feature integration with existing business tools`,
 		reflections: `This project represented a significant modernization effort, building upon a system that had served as a cornerstone of operations for over two decades. The focus was on maintaining core functionality while introducing modern capabilities around scalability, security, and cloud accessibility.
 
-		The development prioritized seamless integration with existing business applications while streamlining features to focus on the most utilized functions.`,
+The development prioritized seamless integration with existing business applications while streamlining features to focus on the most utilized functions.`,
 	},
 	{
 		title: "Man United Season Tracker",
@@ -44,29 +44,29 @@ export const projects = [
 		manualPath: "man-utd-season-tracker",
 		introduction: `Man United Season Tracker is a comprehensive match tracking system that allows fans and administrators to monitor Manchester United's season performance. The system provides detailed insights into matches, team statistics, and formation details.
 
-		The application serves both general users who can view match histories and statistics, as well as administrators who can manage match records through a secure administrative interface.`,
+The application serves both general users who can view match histories and statistics, as well as administrators who can manage match records through a secure administrative interface.`,
 		tasks: `- Match Management System
-		- Implemented comprehensive match recording capabilities
-		- Developed formation tracking with player positioning
-		- Created statistical analysis features
+ - Implemented comprehensive match recording capabilities
+ - Developed formation tracking with player positioning
+ - Created statistical analysis features
 
-		- User Interface Development
-		- Designed responsive match cards and detailed views
-		- Built interactive formation displays
-		- Implemented intuitive navigation systems
+- User Interface Development
+ - Designed responsive match cards and detailed views
+ - Built interactive formation displays
+ - Implemented intuitive navigation systems
 
-		- Administrative Features
-		- Created secure admin authentication system
-		- Developed match CRUD operations
-		- Implemented image upload and processing
+- Administrative Features
+ - Created secure admin authentication system
+ - Developed match CRUD operations
+ - Implemented image upload and processing
 
-		- Data Management
-		- Designed efficient database structure
-		- Implemented data validation systems
-		- Created secure data handling procedures`,
+- Data Management
+ - Designed efficient database structure
+ - Implemented data validation systems
+ - Created secure data handling procedures`,
 		reflections: `This project showcases the implementation of a sports-focused content management system that balances user accessibility with administrative functionality. The focus was on creating an intuitive interface while maintaining robust data management capabilities.
 
-		The development emphasized proper data structuring and validation while providing an engaging user experience for both viewers and administrators.`,
+The development emphasized proper data structuring and validation while providing an engaging user experience for both viewers and administrators.`,
 	},
 	{
 		title: "eBike Management System",
@@ -78,19 +78,19 @@ export const projects = [
 		introduction:
 			"A comprehensive web application built with Blazor for managing eBike parts inventory, purchases, sales, and servicing. The system handles vendor relationships, purchase orders, and inventory tracking while providing a modern, responsive interface for staff operations.",
 		tasks: `- Inventory Management
-		- Implemented purchase order lifecycle
-		- Created vendor management system
-		- Developed inventory tracking
+- Implemented purchase order lifecycle
+- Created vendor management system
+- Developed inventory tracking
 
-		- Purchase Order System
-		- Built automated reordering system
-		- Added tax calculation features
-		- Integrated order confirmation workflow
+- Purchase Order System
+- Built automated reordering system
+- Added tax calculation features
+- Integrated order confirmation workflow
 
-		- Interface Development
-		- Created responsive Blazor components
-		- Implemented real-time updates
-		- Built intuitive navigation system`,
+- Interface Development
+- Created responsive Blazor components
+- Implemented real-time updates
+- Built intuitive navigation system`,
 		reflections:
 			"This project demonstrates effective implementation of a business-critical inventory management system using Blazor. The focus was on creating an efficient and user-friendly interface while maintaining robust backend processing capabilities.",
 	},
