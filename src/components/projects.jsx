@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectModal from "./ProjectModal";
 
-const projects = [
+export const projects = [
 	{
 		title: "PumpMaster V3",
 		description:

@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import { projects } from "./projects";
 
 const ImageModal = ({ src, alt, isOpen, onClose }) => {
 	if (!isOpen) return null;
@@ -65,6 +66,19 @@ const Manual = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	useEffect(() => {
+		const projectTitle = projects.find(
+			(p) => p.manualPath === projectId,
+		)?.title;
+		document.title = projectTitle
+			? `Rohan Matharu | ${projectTitle} Manual`
+			: "Rohan Matharu";
+
+		return () => {
+			document.title = "Rohan Matharu";
+		};
+	}, [projectId]);
 
 	useEffect(() => {
 		const loadContent = async () => {
