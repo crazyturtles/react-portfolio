@@ -58,4 +58,7 @@ export default {
 		},
 	},
 	plugins: [require("@tailwindcss/typography")],
+	components: {
+		'.section-heading': 'mb-12 text-center font-heading text-4xl font-bold text-primary',
+	}
 };
