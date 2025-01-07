@@ -1,5 +1,5 @@
 import { BookOpen, ExternalLink, Github } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProjectModal from "./ProjectModal";
 
@@ -112,6 +112,31 @@ The development emphasized proper data structuring and validation while providin
 
 const Projects = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
+	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+	const [hoveredCard, setHoveredCard] = useState(null);
+
+	useEffect(() => {
+		const handleMouseMove = (e) => {
+			setMousePosition({ x: e.clientX, y: e.clientY });
+		};
+
+		window.addEventListener("mousemove", handleMouseMove);
+		return () => window.removeEventListener("mousemove", handleMouseMove);
+	}, []);
+
+	useEffect(() => {
+		const updatePageOpacity = () => {
+			const elements = document.querySelectorAll("section:not(#projects), nav");
+			const opacity = hoveredCard ? "0.4" : "1";
+
+			for (const el of elements) {
+				el.style.opacity = opacity;
+				el.style.transition = "opacity 0.3s ease-out";
+			}
+		};
+
+		updatePageOpacity();
+	}, [hoveredCard]);
 
 	return (
 		<section id="projects" className="py-section">
@@ -119,7 +144,7 @@ const Projects = () => {
 				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
 					Featured Projects
 				</h2>
-				<div className="grid gap-8 md:grid-cols-2">
+				<div className="grid gap-8 md:grid-cols-2 relative group/projects">
 					{projects.map((project, index) => (
 						<div
 							key={project.title}
@@ -130,7 +155,13 @@ const Projects = () => {
 								if (e.key === "Enter" && project.introduction)
 									setSelectedProject(project);
 							}}
-							className="group animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer flex flex-col justify-between"
+							onKeyUp={(e) => {
+								if (e.key === "Enter" && project.introduction)
+									setSelectedProject(project);
+							}}
+							onMouseEnter={() => setHoveredCard(project.title)}
+							onMouseLeave={() => setHoveredCard(null)}
+							className="group/card animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer flex flex-col justify-between relative z-10 hover:z-20 group-hover/projects:opacity-40 hover:!opacity-100"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
 							<h3 className="mb-2 font-heading text-2xl font-bold select-none">
