@@ -131,7 +131,7 @@ const Projects = () => {
 
 			for (const el of elements) {
 				el.style.opacity = opacity;
-				el.style.transition = "opacity 0.3s ease-out";
+				el.style.transition = "opacity 1.5s ease-out";
 			}
 		};
 

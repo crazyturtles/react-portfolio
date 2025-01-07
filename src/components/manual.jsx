@@ -6,53 +6,63 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { projects } from "./projects";
 
-const ImageModal = ({ src, alt, isOpen, onClose }) => {
-	if (!isOpen) return null;
-
+const KeyboardHandler = ({ onEnter, onEscape, children }) => {
 	const handleKeyDown = (e) => {
-		if (e.key === "Escape") onClose();
+		if ((e.key === "Enter" || e.key === " ") && onEnter) {
+			e.preventDefault();
+			onEnter();
+		}
+		if (e.key === "Escape" && onEscape) {
+			onEscape();
+		}
 	};
 
 	return (
-		<div
-			className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-			onClick={onClose}
-			onKeyDown={(e) => {
-				handleKeyDown(e);
-				if (e.key === "Enter" || e.key === " ") {
-					e.preventDefault();
-					onClose();
-				}
-			}}
-			aria-modal="true"
-			aria-label={`Image preview: ${alt}`}
-		>
+		<button type="button" onKeyDown={handleKeyDown} className="w-full">
+			{children}
+		</button>
+	);
+};
+
+const ImageModal = ({ src, alt, isOpen, onClose }) => {
+	if (!isOpen) return null;
+
+	return (
+		<KeyboardHandler onEscape={onClose} onEnter={onClose}>
 			<div
-				className="relative max-h-[90vh] max-w-[90vw] overflow-auto bg-white p-4 rounded-lg"
-				onClick={(e) => e.stopPropagation()}
+				className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+				onClick={onClose}
 				onKeyDown={(e) => {
-					handleKeyDown(e);
-					if (e.key === "Enter" || e.key === " ") {
-						e.preventDefault();
-						onClose();
-					}
+					if (e.key === "Escape") onClose();
 				}}
+				aria-modal="true"
+				aria-label={`Image preview: ${alt}`}
 			>
-				<button
-					onClick={onClose}
-					className="absolute right-2 top-2 p-1 rounded-full hover:bg-gray-100"
-					aria-label="Close image preview"
-					type="button"
-				>
-					<X size={24} />
-				</button>
-				<img
-					src={src}
-					alt={alt || "Preview image"}
-					className="max-h-[85vh] w-auto"
-				/>
+				<KeyboardHandler onEscape={onClose} onEnter={onClose}>
+					<div
+						className="relative max-h-[90vh] max-w-[90vw] overflow-auto bg-white p-4 rounded-lg"
+						onClick={(e) => e.stopPropagation()}
+						onKeyDown={(e) => {
+							if (e.key === "Escape") onClose();
+						}}
+					>
+						<button
+							onClick={onClose}
+							className="absolute right-2 top-2 p-1 rounded-full hover:bg-gray-100"
+							aria-label="Close image preview"
+							type="button"
+						>
+							<X size={24} />
+						</button>
+						<img
+							src={src}
+							alt={alt || "Preview image"}
+							className="max-h-[85vh] w-auto"
+						/>
+					</div>
+				</KeyboardHandler>
 			</div>
-		</div>
+		</KeyboardHandler>
 	);
 };
 
@@ -174,6 +184,13 @@ const Manual = () => {
 				<div className="container mx-auto flex justify-between items-center">
 					<Link
 						to="/"
+						onClick={() => {
+							setTimeout(() => {
+								document
+									.getElementById("projects")
+									?.scrollIntoView({ behavior: "smooth" });
+							}, 1);
+						}}
 						className="inline-flex items-center gap-2 text-primary hover:text-primary/80"
 					>
 						<ArrowLeft size={20} />
