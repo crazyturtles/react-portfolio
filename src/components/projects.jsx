@@ -2,6 +2,7 @@ import { BookOpen, ExternalLink, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProjectModal from "./ProjectModal";
+import ProjectTags from "./ProjectTags";
 
 export const projects = [
 	{
@@ -171,16 +172,7 @@ const Projects = () => {
 								{project.description}
 							</p>
 							<div>
-								<div className="mb-4 flex flex-wrap gap-2">
-									{project.tags.map((tag) => (
-										<span
-											key={tag}
-											className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent select-none"
-										>
-											{tag}
-										</span>
-									))}
-								</div>
+								<ProjectTags tags={project.tags} />
 								<div className="flex gap-4">
 									{project.github && (
 										<a

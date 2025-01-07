@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { X, Github, ExternalLink, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import ProjectTags from "./ProjectTags";
 
 const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 	const [activeTab, setActiveTab] = useState("introduction");
@@ -27,7 +28,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-			<div className="relative max-h-[90vh] w-full max-w-4xl overflow-auto rounded-lg bg-white p-6">
+			<div className="relative max-h-auto w-full max-w-4xl overflow-auto rounded-lg bg-white p-6">
 				<button
 					onClick={onClose}
 					className="absolute right-4 top-4 rounded-full p-1 hover:bg-gray-100"
@@ -36,11 +37,13 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					<X size={24} />
 				</button>
 
-				<h2 className="mb-6 font-heading text-3xl font-bold">
+				<h2 className="mb-4 font-heading text-3xl font-bold">
 					{currentProject.title}
 				</h2>
 
-				<div className="mb-6 flex gap-4 border-b">
+				<ProjectTags tags={currentProject.tags} />
+
+				<div className="mb-6 mt-6 flex gap-4 border-b">
 					{tabs.map((tab) => (
 						<button
 							key={tab}
