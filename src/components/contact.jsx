@@ -61,7 +61,9 @@ const Contact = () => {
 	return (
 		<section id="contact" className="py-section">
 			<div className="container mx-auto px-4">
-				<h2 className="section-heading select-none">Get In Touch</h2>
+				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
+					Get In Touch
+				</h2>
 				<div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
 					<form onSubmit={handleSubmit} className="space-y-4">
 						{status.message && (
