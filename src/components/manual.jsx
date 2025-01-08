@@ -40,7 +40,7 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
 			>
 				<KeyboardHandler onEscape={onClose} onEnter={onClose}>
 					<div
-						className="relative max-h-auto max-w-auto overflow-auto bg-white p-4 rounded-lg"
+						className="relative max-h-auto max-w-fit overflow-auto bg-white p-4 rounded-lg m-auto"
 						onClick={(e) => e.stopPropagation()}
 						onKeyDown={(e) => {
 							if (e.key === "Escape") onClose();
