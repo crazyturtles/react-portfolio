@@ -22,7 +22,7 @@ const Hero = () => {
 			</div>
 			<button
 				onClick={scrollToProjects}
-				className="absolute bottom-8 left-8 z-40 flex items-center gap-2 rounded-full bg-primary dark:bg-primary-dark px-6 py-3 text-white transition-all hover:bg-primary/90 dark:hover:bg-primary-dark/90 shadow-lg font-sans dark:font-sans-dark"
+				className="absolute bottom-8 left-8 z-40 flex items-center gap-2 rounded-full bg-primary dark:bg-emerald-600 px-6 py-3 text-white transition-all hover::bg-primary/90 dark:hover:bg-emerald-700 shadow-lg font-sans dark:font-sans-dark dark:font-medium"
 				type="button"
 			>
 				View My Work

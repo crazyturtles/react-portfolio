@@ -136,7 +136,7 @@ const Contact = () => {
 						<button
 							type="submit"
 							disabled={loading}
-							className="flex items-center gap-2 rounded-lg bg-primary dark:bg-primary-dark px-6 py-2 text-white transition-colors hover:bg-primary/90 dark:hover:bg-primary-dark/90 disabled:bg-primary/50 dark:disabled:bg-primary-dark/50 select-none"
+							className="flex items-center gap-2 rounded-lg bg-primary dark:bg-emerald-600 px-6 py-2 text-white transition-colors hover:bg-primary/90 dark:hover:bg-emerald-700 disabled:bg-primary/50 dark:disabled:bg-primary-dark/50 dark:font-medium select-none"
 						>
 							{loading ? "Sending..." : "Send Message"}
 							<Send size={16} />
