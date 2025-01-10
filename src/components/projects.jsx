@@ -162,7 +162,7 @@ const Projects = () => {
 							}}
 							onMouseEnter={() => setHoveredCard(project.title)}
 							onMouseLeave={() => setHoveredCard(null)}
-							className="group/card animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer flex flex-col justify-between relative z-10 hover:z-20 group-hover/projects:opacity-40 hover:!opacity-100"
+							className="group/card animate-slide-up rounded-lg bg-surface dark:bg-surface-dark p-6 shadow-lg transition-all hover:shadow-xl cursor-pointer flex flex-col justify-between relative z-10 hover:z-20 group-hover/projects:opacity-40 hover:!opacity-100"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
 							<h3 className="mb-2 font-heading text-2xl font-bold text-primary dark:text-primary-dark select-none">
