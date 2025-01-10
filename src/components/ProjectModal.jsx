@@ -37,7 +37,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					<X size={24} />
 				</button>
 
-				<h2 className="mb-4 font-heading text-3xl font-bold text-primary dark:text-primary-dark">
+				<h2 className="mb-4 font-heading dark:font-heading-dark text-3xl font-bold text-primary dark:text-primary-dark">
 					{currentProject.title}
 				</h2>
 
@@ -49,7 +49,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 							key={tab}
 							type="button"
 							onClick={() => setActiveTab(tab)}
-							className={`pb-2 capitalize ${
+							className={`pb-2 capitalize font-sans dark:font-sans-dark ${
 								activeTab === tab
 									? "border-b-2 border-primary dark:border-primary-dark text-primary dark:text-primary-dark"
 									: "text-secondary dark:text-secondary-dark"
@@ -63,7 +63,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 				<div className="prose dark:prose-invert max-w-none">
 					{activeTab === "introduction" && (
 						<div>
-							<h3 className="mb-4 text-primary dark:text-primary-dark">
+							<h3 className="mb-4 font-heading dark:font-heading-dark text-primary dark:text-primary-dark">
 								Introduction
 							</h3>
 							<ReactMarkdown>{currentProject.introduction}</ReactMarkdown>
@@ -72,7 +72,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 					{activeTab === "tasks" && (
 						<div>
-							<h3 className="mb-4 text-primary dark:text-primary-dark">
+							<h3 className="mb-4 font-heading dark:font-heading-dark text-primary dark:text-primary-dark">
 								Tasks
 							</h3>
 							<div className="space-y-4 pl-4">
@@ -83,7 +83,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 											return (
 												<p
 													key={line.trim()}
-													className={`${indentLevel ? "pl-4" : ""} ${
+													className={`${indentLevel ? "pl-4 font-sans dark:font-sans-dark" : "font-sans dark:font-sans-dark"} ${
 														line.startsWith("-")
 															? "font-semibold mb-0 text-primary dark:text-primary-dark"
 															: "text-secondary dark:text-secondary-dark"
@@ -101,7 +101,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 					{activeTab === "reflections" && (
 						<div>
-							<h3 className="mb-4 text-primary dark:text-primary-dark">
+							<h3 className="mb-4 font-heading dark:font-heading-dark text-primary dark:text-primary-dark">
 								Reflections
 							</h3>
 							<ReactMarkdown>{currentProject.reflections}</ReactMarkdown>
@@ -115,7 +115,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 							<a
 								href={currentProject.github}
 								target="_blank"
-								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
+								className="flex items-center gap-2 font-sans dark:font-sans-dark text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 								rel="noreferrer"
 							>
 								<Github size={20} /> Code
@@ -125,7 +125,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 							<a
 								href={currentProject.live}
 								target="_blank"
-								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
+								className="flex items-center gap-2 font-sans dark:font-sans-dark text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 								rel="noreferrer"
 							>
 								<ExternalLink size={20} /> Live Demo
@@ -134,7 +134,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 						{currentProject.manualPath && (
 							<Link
 								to={`/manuals/${currentProject.manualPath}`}
-								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
+								className="flex items-center gap-2 font-sans dark:font-sans-dark text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 							>
 								<BookOpen size={20} /> View Manual
 							</Link>
@@ -143,7 +143,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 					<button
 						onClick={handleNextProject}
-						className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
+						className="flex items-center gap-2 font-sans dark:font-sans-dark text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 						type="button"
 					>
 						Next Project <ArrowRight size={20} />

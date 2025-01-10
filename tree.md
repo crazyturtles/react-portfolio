@@ -82,7 +82,9 @@
 │   │   ├───manual.jsx
 │   │   ├───ProjectModal.jsx
 │   │   ├───projects.jsx
+│   │   ├───ProjectTags.jsx
 │   │   ├───skills.jsx
+│   │   ├───ThemeToggle.jsx
 │   ├───App.jsx
 │   ├───index.css
 │   ├───main.jsx

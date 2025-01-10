@@ -134,7 +134,7 @@ const Manual = () => {
 
 	const renderToc = (markdownContent) => (
 		<div className="space-y-2">
-			<h2 className="mb-4 font-heading text-lg font-bold text-primary dark:text-primary-dark">
+			<h2 className="mb-4 font-heading dark:font-heading-dark text-lg font-bold text-primary dark:text-primary-dark">
 				Table of Contents
 			</h2>
 			<ReactMarkdown
@@ -155,7 +155,7 @@ const Manual = () => {
 						<a
 							href={href}
 							onClick={(e) => handleSmoothScroll(e, href)}
-							className="block py-1 text-sm text-secondary dark:text-secondary-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
+							className="block py-1 text-sm font-sans dark:font-sans-dark text-secondary dark:text-secondary-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
 						>
 							{children}
 						</a>
@@ -195,7 +195,7 @@ const Manual = () => {
 									?.scrollIntoView({ behavior: "smooth" });
 							}, 1);
 						}}
-						className="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80"
+						className="inline-flex items-center gap-2 font-heading dark:font-heading-dark text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80"
 					>
 						<ArrowLeft size={20} />
 						Back to Projects
@@ -259,12 +259,20 @@ const Manual = () => {
 				<main className="flex-1">
 					<div className="rounded-lg bg-surface dark:bg-surface-dark p-8 shadow-lg">
 						<ReactMarkdown
-							className="prose dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-a:text-primary dark:prose-a:text-primary-dark prose-img:rounded-lg"
+							className="prose dark:prose-invert max-w-none prose-headings:font-heading dark:font-heading-dark prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-a:text-primary dark:prose-a:text-primary-dark prose-img:rounded-lg"
 							remarkPlugins={[remarkGfm]}
 							rehypePlugins={[rehypeRaw]}
 							components={{
 								h2: createHeadingComponent(2),
 								h3: createHeadingComponent(3),
+								p: ({ children }) => (
+									<p className="font-heading dark:font-heading-dark">
+										{children}
+									</p>
+								),
+								ul: ({ children }) => (
+									<p className="font-sans dark:font-sans-dark">{children}</p>
+								),
 								img: ({ node, ...props }) => (
 									<img
 										{...props}

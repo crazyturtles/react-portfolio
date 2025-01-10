@@ -3,7 +3,7 @@ const ProjectTags = ({ tags }) => (
 		{tags.map((tag) => (
 			<span
 				key={tag}
-				className="rounded-full bg-accent/10 px-3 py-1 text-sm text-accent select-none"
+				className="rounded-full bg-accent/10 px-3 py-1 font-sans dark:font-sans-dark text-sm text-accent select-none"
 			>
 				{tag}
 			</span>

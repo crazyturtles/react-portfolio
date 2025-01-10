@@ -1,34 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#2563eb",
-          dark: "#60a5fa"
-        },
-        secondary: {
-          DEFAULT: "#475569",
-          dark: "#94a3b8"
-        },
-        accent: {
-          DEFAULT: "#f59e0b",
-          dark: "#8b5cf6"
-        },
-        surface: {
-          DEFAULT: "#ffffff",
-          dark: "#1e293b"
-        },
-        background: {
-          DEFAULT: "#ffffff",
-          dark: "#0f172a"
-        }
+        primary: "#2563eb",
+        secondary: "#475569",
+        accent: "#f59e0b",
+        'primary-dark': "#6ee7b7",
+        'secondary-dark': "#94a3b8",
+        'accent-dark': "#c084fc",
+        'background-dark': "#030712",
+        'surface-dark': "#111827"
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         heading: ["Poppins", "sans-serif"],
+        'sans-dark': ["Albert Sans", "sans-serif"],
+        'heading-dark': ["Instrument Sans", "sans-serif"]
       },
       spacing: {
         section: "80px",
@@ -72,14 +62,16 @@ export default {
             },
           },
         },
-        dark: {
+        invert: {
           css: {
-            color: "#94a3b8",
-            a: {
-              color: "#60a5fa",
-              "&:hover": {
-                color: "#3b82f6",
-              },
+            h1: {
+              fontFamily: "Instrument Sans, sans-serif",
+            },
+            h2: {
+              fontFamily: "Instrument Sans, sans-serif",
+            },
+            h3: {
+              fontFamily: "Instrument Sans, sans-serif",
             },
           },
         },
