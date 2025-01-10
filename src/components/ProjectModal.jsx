@@ -27,23 +27,23 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 	const tabs = ["introduction", "tasks", "reflections"];
 
 	return (
-		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-			<div className="relative max-h-auto w-full max-w-4xl overflow-auto rounded-lg bg-white p-6">
+		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 dark:bg-black/70 p-4">
+			<div className="relative max-h-auto w-full max-w-4xl overflow-auto rounded-lg bg-surface dark:bg-surface-dark p-6">
 				<button
 					onClick={onClose}
-					className="absolute right-4 top-4 rounded-full p-1 hover:bg-gray-100"
+					className="absolute right-4 top-4 rounded-full p-1 hover:bg-gray-100 dark:hover:bg-background-dark text-secondary dark:text-secondary-dark"
 					type="button"
 				>
 					<X size={24} />
 				</button>
 
-				<h2 className="mb-4 font-heading text-3xl font-bold">
+				<h2 className="mb-4 font-heading text-3xl font-bold text-primary dark:text-primary-dark">
 					{currentProject.title}
 				</h2>
 
 				<ProjectTags tags={currentProject.tags} />
 
-				<div className="mb-6 mt-6 flex gap-4 border-b">
+				<div className="mb-6 mt-6 flex gap-4 border-b dark:border-surface-dark">
 					{tabs.map((tab) => (
 						<button
 							key={tab}
@@ -51,8 +51,8 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 							onClick={() => setActiveTab(tab)}
 							className={`pb-2 capitalize ${
 								activeTab === tab
-									? "border-b-2 border-primary text-primary"
-									: "text-secondary"
+									? "border-b-2 border-primary dark:border-primary-dark text-primary dark:text-primary-dark"
+									: "text-secondary dark:text-secondary-dark"
 							}`}
 						>
 							{tab}
@@ -60,17 +60,21 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 					))}
 				</div>
 
-				<div className="prose max-w-none">
+				<div className="prose dark:prose-invert max-w-none">
 					{activeTab === "introduction" && (
 						<div>
-							<h3 className="mb-4">Introduction</h3>
+							<h3 className="mb-4 text-primary dark:text-primary-dark">
+								Introduction
+							</h3>
 							<ReactMarkdown>{currentProject.introduction}</ReactMarkdown>
 						</div>
 					)}
 
 					{activeTab === "tasks" && (
 						<div>
-							<h3 className="mb-4">Tasks</h3>
+							<h3 className="mb-4 text-primary dark:text-primary-dark">
+								Tasks
+							</h3>
 							<div className="space-y-4 pl-4">
 								{currentProject.tasks.split("\n\n").map((section) => (
 									<div key={section.trim()} className="space-y-2">
@@ -81,8 +85,8 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 													key={line.trim()}
 													className={`${indentLevel ? "pl-4" : ""} ${
 														line.startsWith("-")
-															? "font-semibold mb-0"
-															: "text-secondary"
+															? "font-semibold mb-0 text-primary dark:text-primary-dark"
+															: "text-secondary dark:text-secondary-dark"
 													}`}
 												>
 													{line}
@@ -97,19 +101,21 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 					{activeTab === "reflections" && (
 						<div>
-							<h3 className="mb-4">Reflections</h3>
+							<h3 className="mb-4 text-primary dark:text-primary-dark">
+								Reflections
+							</h3>
 							<ReactMarkdown>{currentProject.reflections}</ReactMarkdown>
 						</div>
 					)}
 				</div>
 
-				<div className="mt-8 flex items-center justify-between border-t pt-4">
+				<div className="mt-8 flex items-center justify-between border-t dark:border-surface-dark pt-4">
 					<div className="flex gap-4">
 						{currentProject.github && (
 							<a
 								href={currentProject.github}
 								target="_blank"
-								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 								rel="noreferrer"
 							>
 								<Github size={20} /> Code
@@ -119,7 +125,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 							<a
 								href={currentProject.live}
 								target="_blank"
-								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 								rel="noreferrer"
 							>
 								<ExternalLink size={20} /> Live Demo
@@ -128,7 +134,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 						{currentProject.manualPath && (
 							<Link
 								to={`/manuals/${currentProject.manualPath}`}
-								className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+								className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 							>
 								<BookOpen size={20} /> View Manual
 							</Link>
@@ -137,7 +143,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 					<button
 						onClick={handleNextProject}
-						className="flex items-center gap-2 text-secondary transition-colors hover:text-primary"
+						className="flex items-center gap-2 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark"
 						type="button"
 					>
 						Next Project <ArrowRight size={20} />

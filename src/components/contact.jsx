@@ -61,7 +61,7 @@ const Contact = () => {
 	return (
 		<section id="contact" className="py-section">
 			<div className="container mx-auto px-4">
-				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
+				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary dark:text-primary-dark select-none">
 					Get In Touch
 				</h2>
 				<div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -72,8 +72,8 @@ const Contact = () => {
 									status.show ? "opacity-100" : "opacity-0"
 								} ${
 									status.type === "error"
-										? "bg-red-100 text-red-800"
-										: "bg-green-100 text-green-800"
+										? "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100"
+										: "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100"
 								}`}
 							>
 								{status.message}
@@ -82,7 +82,7 @@ const Contact = () => {
 						<div>
 							<label
 								htmlFor="name"
-								className="mb-1 block text-secondary select-none"
+								className="mb-1 block text-secondary dark:text-secondary-dark select-none"
 							>
 								Name
 							</label>
@@ -90,7 +90,7 @@ const Contact = () => {
 								type="text"
 								id="name"
 								required
-								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
+								className="w-full rounded-lg border dark:border-surface-dark p-2 bg-surface dark:bg-background-dark text-primary dark:text-primary-dark focus:border-primary dark:focus:border-primary-dark focus:outline-none"
 								value={formData.name}
 								onChange={(e) =>
 									setFormData({ ...formData, name: e.target.value })
@@ -100,7 +100,7 @@ const Contact = () => {
 						<div>
 							<label
 								htmlFor="email"
-								className="mb-1 block text-secondary select-none"
+								className="mb-1 block text-secondary dark:text-secondary-dark select-none"
 							>
 								Email
 							</label>
@@ -108,7 +108,7 @@ const Contact = () => {
 								type="email"
 								id="email"
 								required
-								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
+								className="w-full rounded-lg border dark:border-surface-dark p-2 bg-surface dark:bg-background-dark text-primary dark:text-primary-dark focus:border-primary dark:focus:border-primary-dark focus:outline-none"
 								value={formData.email}
 								onChange={(e) =>
 									setFormData({ ...formData, email: e.target.value })
@@ -118,7 +118,7 @@ const Contact = () => {
 						<div>
 							<label
 								htmlFor="message"
-								className="mb-1 block text-secondary select-none"
+								className="mb-1 block text-secondary dark:text-secondary-dark select-none"
 							>
 								Message
 							</label>
@@ -126,7 +126,7 @@ const Contact = () => {
 								id="message"
 								rows={4}
 								required
-								className="w-full rounded-lg border p-2 focus:border-primary focus:outline-none"
+								className="w-full rounded-lg border dark:border-surface-dark p-2 bg-surface dark:bg-background-dark text-primary dark:text-primary-dark focus:border-primary dark:focus:border-primary-dark focus:outline-none"
 								value={formData.message}
 								onChange={(e) =>
 									setFormData({ ...formData, message: e.target.value })
@@ -136,7 +136,7 @@ const Contact = () => {
 						<button
 							type="submit"
 							disabled={loading}
-							className="flex items-center gap-2 rounded-lg bg-primary px-6 py-2 text-white transition-colors hover:bg-primary/90 disabled:bg-primary/50 select-none"
+							className="flex items-center gap-2 rounded-lg bg-primary dark:bg-primary-dark px-6 py-2 text-white transition-colors hover:bg-primary/90 dark:hover:bg-primary-dark/90 disabled:bg-primary/50 dark:disabled:bg-primary-dark/50 select-none"
 						>
 							{loading ? "Sending..." : "Send Message"}
 							<Send size={16} />
@@ -144,21 +144,21 @@ const Contact = () => {
 					</form>
 
 					<div className="space-y-6">
-						<div className="rounded-lg bg-gray-50 p-6">
-							<h3 className="mb-4 font-heading text-xl font-bold select-none">
+						<div className="rounded-lg bg-gray-50 dark:bg-surface-dark p-6">
+							<h3 className="mb-4 font-heading text-xl font-bold text-primary dark:text-primary-dark select-none">
 								Connect With Me
 							</h3>
 							<div className="space-y-4">
 								<a
 									href="mailto:rohanmatharu@live.ca"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
+									className="flex items-center gap-3 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark select-none"
 								>
 									<Mail /> rohanmatharu@live.ca
 								</a>
 								<a
 									href="https://github.com/crazyturtles"
 									target="_blank"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
+									className="flex items-center gap-3 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark select-none"
 									rel="noreferrer"
 								>
 									<Github /> GitHub
@@ -166,7 +166,7 @@ const Contact = () => {
 								<a
 									href="https://linkedin.com/in/rohanmatharu"
 									target="_blank"
-									className="flex items-center gap-3 text-secondary transition-colors hover:text-primary select-none"
+									className="flex items-center gap-3 text-secondary dark:text-secondary-dark transition-colors hover:text-primary dark:hover:text-primary-dark select-none"
 									rel="noreferrer"
 								>
 									<Linkedin /> LinkedIn

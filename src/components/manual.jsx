@@ -30,7 +30,7 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
 	return (
 		<KeyboardHandler onEscape={onClose} onEnter={onClose}>
 			<div
-				className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+				className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
 				onClick={onClose}
 				onKeyDown={(e) => {
 					if (e.key === "Escape") onClose();
@@ -40,7 +40,7 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
 			>
 				<KeyboardHandler onEscape={onClose} onEnter={onClose}>
 					<div
-						className="relative max-h-auto max-w-fit overflow-auto bg-white p-4 rounded-lg m-auto"
+						className="relative max-h-auto max-w-fit overflow-auto bg-surface dark:bg-surface-dark p-4 rounded-lg m-auto"
 						onClick={(e) => e.stopPropagation()}
 						onKeyDown={(e) => {
 							if (e.key === "Escape") onClose();
@@ -48,11 +48,14 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
 					>
 						<button
 							onClick={onClose}
-							className="absolute right-2 top-2 p-1 rounded-full hover:bg-gray-100"
+							className="absolute right-2 top-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-background-dark"
 							aria-label="Close image preview"
 							type="button"
 						>
-							<X size={24} />
+							<X
+								size={24}
+								className="text-secondary dark:text-secondary-dark"
+							/>
 						</button>
 						<img
 							src={src}
@@ -131,7 +134,7 @@ const Manual = () => {
 
 	const renderToc = (markdownContent) => (
 		<div className="space-y-2">
-			<h2 className="mb-4 font-heading text-lg font-bold text-primary">
+			<h2 className="mb-4 font-heading text-lg font-bold text-primary dark:text-primary-dark">
 				Table of Contents
 			</h2>
 			<ReactMarkdown
@@ -152,7 +155,7 @@ const Manual = () => {
 						<a
 							href={href}
 							onClick={(e) => handleSmoothScroll(e, href)}
-							className="block py-1 text-sm text-secondary hover:text-primary transition-colors"
+							className="block py-1 text-sm text-secondary dark:text-secondary-dark hover:text-primary dark:hover:text-primary-dark transition-colors"
 						>
 							{children}
 						</a>
@@ -171,6 +174,7 @@ const Manual = () => {
 				<Tag
 					id={children.toString().toLowerCase().replace(/\s+/g, "-")}
 					{...props}
+					className="text-primary dark:text-primary-dark"
 				>
 					{children}
 				</Tag>
@@ -179,8 +183,8 @@ const Manual = () => {
 	};
 
 	return (
-		<div className="min-h-screen bg-gray-50">
-			<nav className="fixed top-0 z-50 w-full bg-white/80 px-4 py-4 backdrop-blur h-16">
+		<div className="min-h-screen bg-gray-50 dark:bg-background-dark">
+			<nav className="fixed top-0 z-50 w-full bg-surface/80 dark:bg-surface-dark/80 px-4 py-4 backdrop-blur h-16">
 				<div className="container mx-auto flex justify-between items-center">
 					<Link
 						to="/"
@@ -191,7 +195,7 @@ const Manual = () => {
 									?.scrollIntoView({ behavior: "smooth" });
 							}, 1);
 						}}
-						className="inline-flex items-center gap-2 text-primary hover:text-primary/80"
+						className="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary/80 dark:hover:text-primary-dark/80"
 					>
 						<ArrowLeft size={20} />
 						Back to Projects
@@ -204,7 +208,7 @@ const Manual = () => {
 								setIsMenuOpen(!isMenuOpen);
 							}
 						}}
-						className="lg:hidden p-2 text-primary hover:bg-gray-100 rounded-lg"
+						className="lg:hidden p-2 text-primary dark:text-primary-dark hover:bg-gray-100 dark:hover:bg-surface-dark rounded-lg"
 						aria-label="Toggle table of contents"
 						tabIndex={0}
 						type="button"
@@ -216,7 +220,7 @@ const Manual = () => {
 
 			<div className="container mx-auto flex gap-8 px-4 py-20">
 				{/* Desktop ToC */}
-				<aside className="hidden lg:block sticky top-24 h-[calc(100vh-6rem)] w-64 overflow-y-auto rounded-lg bg-white p-6 shadow-lg">
+				<aside className="hidden lg:block sticky top-24 h-[calc(100vh-6rem)] w-64 overflow-y-auto rounded-lg bg-surface dark:bg-surface-dark p-6 shadow-lg">
 					{renderToc(toc)}
 				</aside>
 
@@ -239,10 +243,10 @@ const Manual = () => {
 						role="button"
 						aria-label="Close menu overlay"
 					/>
-					<aside className="relative h-full w-64 overflow-y-auto bg-white p-6 shadow-lg">
+					<aside className="relative h-full w-64 overflow-y-auto bg-surface dark:bg-surface-dark p-6 shadow-lg">
 						<button
 							onClick={() => setIsMenuOpen(false)}
-							className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100"
+							className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-background-dark"
 							aria-label="Close menu"
 							type="button"
 						>
@@ -253,9 +257,9 @@ const Manual = () => {
 				</div>
 
 				<main className="flex-1">
-					<div className="rounded-lg bg-white p-8 shadow-lg">
+					<div className="rounded-lg bg-surface dark:bg-surface-dark p-8 shadow-lg">
 						<ReactMarkdown
-							className="prose max-w-none prose-headings:font-heading prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-a:text-primary prose-img:rounded-lg"
+							className="prose dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-a:text-primary dark:prose-a:text-primary-dark prose-img:rounded-lg"
 							remarkPlugins={[remarkGfm]}
 							rehypePlugins={[rehypeRaw]}
 							components={{

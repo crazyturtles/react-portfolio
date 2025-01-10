@@ -37,23 +37,25 @@ const skillCategories = [
 
 const Skills = () => {
 	return (
-		<section id="skills" className="bg-gray-50 py-section">
+		<section id="skills" className="bg-gray-50 dark:bg-surface-dark py-section">
 			<div className="container mx-auto px-4">
-				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary select-none">
+				<h2 className="mb-12 text-center font-heading text-4xl font-bold text-primary dark:text-primary-dark select-none">
 					Skills & Technologies
 				</h2>
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 					{skillCategories.map((category, index) => (
 						<div
 							key={category.title}
-							className="animate-slide-up rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl select-none flex flex-col"
+							className="animate-slide-up rounded-lg bg-surface dark:bg-background-dark p-6 shadow-lg transition-all hover:shadow-xl select-none flex flex-col"
 							style={{ animationDelay: `${index * 200}ms` }}
 						>
 							<div>
-								<div className={`mb-4 text-${category.color}`}>
+								<div
+									className={`mb-4 text-${category.color} dark:text-${category.color}-dark`}
+								>
 									{category.icon}
 								</div>
-								<h3 className="mb-4 font-heading text-2xl font-bold select-none">
+								<h3 className="mb-4 font-heading text-2xl font-bold text-primary dark:text-primary-dark select-none">
 									{category.title}
 								</h3>
 							</div>
@@ -61,7 +63,7 @@ const Skills = () => {
 								{category.skills.map((skill) => (
 									<span
 										key={skill}
-										className="rounded-full bg-gray-100 px-3 py-1 text-sm text-secondary select-none transition-colors hover:bg-accent/10 hover:text-accent"
+										className="rounded-full bg-gray-100 dark:bg-surface-dark px-3 py-1 text-sm text-secondary dark:text-secondary-dark select-none transition-colors hover:bg-accent/10 dark:hover:bg-accent-dark/10 hover:text-accent dark:hover:text-accent-dark"
 									>
 										{skill}
 									</span>
