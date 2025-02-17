@@ -28,7 +28,7 @@ const ProjectModal = ({ project, projects, isOpen, onClose }) => {
 
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 dark:bg-black/70 p-4">
-			<div className="relative max-h-auto w-full max-w-4xl overflow-auto rounded-lg bg-surface dark:bg-surface-dark p-6">
+			<div className="relative max-h-auto w-full max-w-4xl overflow-auto rounded-lg bg-gray-100 dark:bg-surface-dark p-6">
 				<button
 					onClick={onClose}
 					className="absolute right-4 top-4 rounded-full p-1 hover:bg-gray-100 dark:hover:bg-background-dark text-secondary dark:text-secondary-dark"
